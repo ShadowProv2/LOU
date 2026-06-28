@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LOU — glaces artisanales, The Red Room et merch iconique à La Marsa, Tunis.">
+  <meta name="theme-color" content="#140003">
+  <title>LOU — Glaces artisanales à La Marsa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍦</text></svg>">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="page-home is-entering">
+  <div class="page-transition" aria-hidden="true"><span>LOU.</span></div>
+
+  <div class="announcement" aria-label="Informations pratiques">
+    <div class="announcement-track">
+      <span>GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span>
+      <span aria-hidden="true">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span>
+      <span aria-hidden="true">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span>
+    </div>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="index.html" aria-label="Accueil LOU">LOU<span>.</span></a>
+
+    <nav class="desktop-nav" aria-label="Navigation principale">
+      <a data-nav="home" href="index.html">Accueil</a>
+      <a data-nav="menu" href="menu.html">Menu</a>
+      <a data-nav="merch" href="merch.html">Merch</a>
+      <a href="index.html#histoire">Histoire</a>
+      <a href="index.html#red-room">The Red Room</a>
+      <a href="index.html#location">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="icon-link" href="https://www.instagram.com/loucreate__/" target="_blank" rel="noopener" aria-label="Instagram LOU">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
+      </a>
+      <a class="cart-button" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" target="_blank" rel="noopener" aria-label="Commander sur Glovo">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.4L21 7H7"></path><circle cx="10" cy="20" r="1.4"></circle><circle cx="18" cy="20" r="1.4"></circle></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Navigation mobile">
+      <a data-nav="home" href="index.html">Accueil</a>
+      <a data-nav="menu" href="menu.html">Menu</a>
+      <a data-nav="merch" href="merch.html">Merch</a>
+      <a href="index.html#histoire">Histoire</a>
+      <a href="index.html#red-room">The Red Room</a>
+      <a href="index.html#location">Contact</a>
+      <a class="mobile-menu-cta" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" target="_blank" rel="noopener">Commander sur Glovo ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero-home" id="accueil">
+      <div class="hero-cursor-glow" id="heroCursorGlow" aria-hidden="true"></div>
+      <svg class="hero-drip" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="dripGradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#C8001A" stop-opacity=".98"></stop><stop offset="100%" stop-color="#3D0008" stop-opacity=".9"></stop></linearGradient>
+          <filter id="dripGlow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="18" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter>
+        </defs>
+        <path class="drip-surface" d="M0 0H1600V218C1512 188 1458 254 1372 233C1283 211 1237 156 1157 185C1066 219 1037 316 940 297C835 276 832 173 730 194C616 217 583 330 467 304C372 283 344 197 252 223C156 250 96 283 0 252V0Z" fill="url(#dripGradient)" filter="url(#dripGlow)"></path>
+        <path class="drip-thread drip-one" d="M467 270C467 270 468 369 469 423C470 473 492 486 493 535C494 584 472 604 472 650"></path>
+        <path class="drip-thread drip-two" d="M940 258C941 315 944 350 944 394C944 439 923 461 924 505"></path>
+        <path class="drip-thread drip-three" d="M1288 212C1288 252 1289 299 1289 344C1289 382 1275 405 1276 443"></path>
+        <circle class="drip-drop drip-drop-one" cx="472" cy="687" r="14"></circle><circle class="drip-drop drip-drop-two" cx="924" cy="537" r="10"></circle><circle class="drip-drop drip-drop-three" cx="1276" cy="474" r="8"></circle>
+      </svg>
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-marquee" aria-hidden="true">THE RED ROOM · LA MARSA · THE RED ROOM · LA MARSA ·</div>
+
+      <div class="hero-inner container">
+        <div class="hero-copy reveal">
+          <p class="eyebrow eyebrow-light">Glaces artisanales · La Marsa</p>
+          <h1 class="hero-logo" aria-label="LOU">LOU</h1>
+          <p class="hero-tagline">Cold craft.<br>Crimson mood.</p>
+          <p class="hero-description">Des recettes généreuses, des textures ultra-crémeuses et une adresse rouge devenue iconique à La Marsa.</p>
+          <div class="hero-actions">
+            <a class="button button-cream" href="menu.html">Découvrir le menu</a>
+            <a class="button button-outline-light" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" target="_blank" rel="noopener">Commander sur Glovo</a>
+          </div>
+          <div class="hero-meta"><span><b>7J/7</b> Ouvert</span><span><b>12h—00h</b> Horaires</span><span><b>La Marsa</b> Tunis</span></div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-image-frame">
+            <img src="assets/lou-vitrine.png" alt="Vitrine de glaces artisanales LOU à La Marsa">
+            <span class="hero-image-index">01 / 03</span>
+            <div class="hero-image-caption"><span>Saveurs du moment</span><strong>Crémeuses. Généreuses. LOU.</strong></div>
+          </div>
+          <article class="hero-floating-card hero-floating-card-top"><img src="assets/menu-pistachio.jpg" alt="Glace Pistachio"><div><span>Best-seller</span><strong>Pistachio</strong></div></article>
+          <article class="hero-floating-card hero-floating-card-bottom"><img src="assets/menu-brownie-fix.jpg" alt="Glace The Brownie Fix"><div><span>Ultra gourmand</span><strong>Brownie Fix</strong></div></article>
+        </div>
+      </div>
+
+      <a class="hero-scroll" href="#menu-preview" aria-label="Découvrir la suite"><span>Scroll</span><i></i></a>
+    </section>
+
+    <section class="ticker" aria-label="Atouts LOU"><div class="ticker-track"><span>GLACES ARTISANALES</span><i>✦</i><span>POTS À PARTAGER</span><i>✦</i><span>MERCH LOU</span><i>✦</i><span>THE RED ROOM</span><i>✦</i><span>GLACES ARTISANALES</span><i>✦</i><span>POTS À PARTAGER</span><i>✦</i><span>MERCH LOU</span><i>✦</i><span>THE RED ROOM</span><i>✦</i></div></section>
+
+    <section class="preview-section menu-preview" id="menu-preview">
+      <div class="section-heading container reveal">
+        <div><p class="eyebrow eyebrow-red">Menu preview</p><h2>Trois raisons<br>de craquer.</h2></div>
+        <p class="heading-copy">Une sélection de nos obsessions du moment. Le reste t’attend sur la page menu.</p>
+      </div>
+
+      <div class="preview-grid container">
+        <article class="preview-card menu-preview-card reveal" data-menu-card data-parallax="0.05">
+          <span class="floating-badge">BEST-SELLER</span>
+          <div class="preview-media"><img src="assets/menu-pistachio.jpg" alt="Glace Pistachio"></div>
+          <div class="preview-card-copy"><span class="utility-label">Pot 1 L + 6 cônes</span><h3>Pistachio</h3><p>Pistache crémeuse, éclats croquants et finale légèrement toastée.</p><div class="preview-card-bottom"><strong class="price-tag"><small>TND</small> 55,000</strong><button class="add-button" type="button" data-product="Pistachio">Ajouter</button></div></div>
+        </article>
+
+        <article class="preview-card menu-preview-card reveal" data-menu-card data-parallax="0.08">
+          <div class="preview-media"><img src="assets/menu-brownie-fix.jpg" alt="The Brownie Fix"></div>
+          <div class="preview-card-copy"><span class="utility-label">Pot 1 L + 6 cônes</span><h3>The Brownie Fix</h3><p>Brownie fondant, noisettes et sauce chocolat avec un vrai contraste de textures.</p><div class="preview-card-bottom"><strong class="price-tag"><small>TND</small> 55,000</strong><button class="add-button" type="button" data-product="The Brownie Fix">Ajouter</button></div></div>
+        </article>
+
+        <article class="preview-card menu-preview-card reveal" data-menu-card data-parallax="0.06">
+          <div class="preview-media"><img src="assets/menu-valrhona.jpg" alt="Valrhona Dark Chocolate"></div>
+          <div class="preview-card-copy"><span class="utility-label">Pot 1 L + 6 cônes</span><h3>Valrhona Dark Chocolate</h3><p>Chocolat noir intense, texture dense et finale profondément cacaotée.</p><div class="preview-card-bottom"><strong class="price-tag"><small>TND</small> 55,000</strong><button class="add-button" type="button" data-product="Valrhona Dark Chocolate">Ajouter</button></div></div>
+        </article>
+      </div>
+
+      <div class="section-cta container reveal"><a class="button button-red button-wide" href="menu.html">Voir tout le menu →</a></div>
+    </section>
+
+    <section class="preview-section merch-preview">
+      <div class="section-heading section-heading-dark container reveal">
+        <div><p class="eyebrow eyebrow-light">LOU Drop 001</p><h2>Wear<br>the room.</h2></div>
+        <p class="heading-copy">Pochettes et tote bags en édition limitée, conçus comme des objets de la Red Room.</p>
+      </div>
+
+      <div class="merch-preview-grid container">
+        <article class="merch-editorial-card reveal" data-parallax="0.06">
+          <div class="merch-editorial-media"><span class="limited-ribbon">LIMITED</span><img src="assets/merch-tote-creme.jpg" alt="Tote Bag Crème LOU"><h3>TOTE<br>CRÈME</h3></div>
+          <div class="merch-editorial-info"><div><span>DROP 001 · SAC</span><p>Spacieux, résistant et pensé pour accompagner le quotidien.</p></div><strong class="price-tag price-tag-dark"><small>TND</small> 55,000</strong></div>
+        </article>
+        <article class="merch-editorial-card reveal" data-parallax="0.09">
+          <div class="merch-editorial-media"><img src="assets/merch-pochette-creme.jpg" alt="Pochette Crème LOU"><h3>POCHETTE<br>CRÈME</h3></div>
+          <div class="merch-editorial-info"><div><span>DROP 001 · ACCESSOIRE</span><p>Compacte, légère et signée par un logo rouge net et graphique.</p></div><strong class="price-tag price-tag-dark"><small>TND</small> 25,000</strong></div>
+        </article>
+      </div>
+
+      <div class="section-cta container reveal"><a class="button button-cream button-wide" href="merch.html">Voir toute la collection →</a></div>
+    </section>
+
+    <section class="story-section" id="histoire">
+      <div class="story-number" aria-hidden="true">01</div>
+      <div class="story-heading container reveal"><p class="eyebrow eyebrow-red">Histoire</p><h2>Une adresse.<br>Une couleur.<br>Une obsession.</h2></div>
+      <div class="story-content container">
+        <div class="story-copy reveal"><p class="story-lead">LOU transforme une pause glace en expérience visuelle, tactile et gourmande.</p><p>À La Marsa, la boutique assume une identité radicale : un rouge profond, une lumière cinématographique et une vitrine qui donne envie de tout goûter.</p><p>Les recettes sont travaillées pour rester franches et généreuses : chocolat intense, pistache crémeuse, fruits rouges acidulés et textures pleines de contraste.</p><a class="text-link" href="#red-room">Entrer dans l’univers <span>↘</span></a></div>
+        <aside class="story-poster reveal"><span class="story-poster-label">THE RED ROOM</span><strong>LA<br>MARSA</strong><div class="story-poster-rule"></div><p>Glaces artisanales<br>Ouvert 7J/7<br>12h — 00h</p></aside>
+      </div>
+    </section>
+
+    <section class="red-room-section" id="red-room">
+      <div class="red-room-lines" aria-hidden="true"></div>
+      <p class="red-room-index">02 · LA MARSA · TUNIS</p>
+      <div class="red-room-copy reveal"><p class="eyebrow eyebrow-light">The Red Room</p><h2>Not a shop.<br>A red state<br>of mind.</h2><p>Un espace immersif pensé pour les yeux autant que pour les papilles.</p><a class="button button-outline-light" href="https://www.instagram.com/loucreate__/" target="_blank" rel="noopener">Voir l’univers sur Instagram ↗</a></div>
+      <div class="red-room-orbit" aria-hidden="true"><span>LOU</span></div>
+    </section>
+
+    <section class="location-section" id="location">
+      <div class="map-wrap reveal"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3191.805!2d10.3302903!3d36.8807228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e2b5000ab8ae45%3A0xb8178661808ec50d!2sLOU+(glace)!5e0!3m2!1sfr!2stn!4v1700000000000!5m2!1sfr!2stn" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" title="Carte de LOU à La Marsa"></iframe></div>
+      <div class="location-card reveal"><p class="eyebrow eyebrow-red">Location</p><h2>Find<br>the red.</h2><div class="location-list"><div><span>Adresse</span><strong>La Marsa, Tunis, Tunisie</strong></div><div><span>Horaires</span><strong>Tous les jours · 12h—00h</strong></div><div><span>Instagram</span><strong>@loucreate__</strong></div><div><span>Livraison</span><strong>Disponible via Glovo</strong></div></div><div class="location-actions"><a class="button button-red" href="https://www.google.com/maps/place/LOU+(glace)/@36.8807228,10.3328652,17z" target="_blank" rel="noopener">Ouvrir Google Maps</a><a class="button button-dark" href="https://www.instagram.com/loucreate__/" target="_blank" rel="noopener">Instagram</a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-watermark" aria-hidden="true">LOU</div><div class="footer-topline"></div>
+    <div class="footer-grid container">
+      <div class="footer-intro"><a class="footer-brand" href="index.html">LOU<span>.</span></a><p>Glaces artisanales.<br>Crimson mood.<br>La Marsa, Tunis.</p></div>
+      <div class="footer-column"><span>EXPLORE</span><a href="index.html">Accueil</a><a href="menu.html">Menu</a><a href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a></div>
+      <div class="footer-column"><span>VISIT</span><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Location</a><a href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" target="_blank" rel="noopener">Commander ↗</a></div>
+      <div class="footer-column"><span>FOLLOW</span><a href="https://www.instagram.com/loucreate__/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" target="_blank" rel="noopener">Glovo ↗</a></div>
+    </div>
+    <div class="footer-bottom container"><span>© 2026 LOU. Tous droits réservés.</span><span>THE RED ROOM · LA MARSA</span></div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
