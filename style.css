@@ -379,3 +379,251 @@ body.is-leaving .page-transition { pointer-events: all; animation: pageCover .55
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .hero-cursor-glow { display: none; }
 }
+
+/* ----------------------------------------------------------
+   PHONE PERFORMANCE MODE
+   Keeps every interaction while removing expensive mobile-only
+   rendering work such as blur, continuous parallax and large shadows.
+   ---------------------------------------------------------- */
+
+.is-page-hidden *,
+.is-page-hidden *::before,
+.is-page-hidden *::after {
+  animation-play-state: paused !important;
+}
+
+@supports (content-visibility: auto) {
+  @media (max-width: 920px) {
+    .preview-section,
+    .story-section,
+    .red-room-section,
+    .location-section,
+    .catalog-section,
+    .site-footer {
+      content-visibility: auto;
+      contain-intrinsic-size: 760px;
+    }
+
+    .location-section,
+    .catalog-section {
+      contain-intrinsic-size: 1100px;
+    }
+  }
+}
+
+@keyframes mobileFlashIn {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes mobileFlashOut {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 920px), (pointer: coarse) {
+  html { scroll-behavior: auto; }
+
+  .page-transition {
+    transform: none;
+    opacity: 0;
+  }
+
+  body.is-entering .page-transition {
+    animation: mobileFlashIn .22s ease-out both;
+  }
+
+  body.is-leaving .page-transition {
+    animation: mobileFlashOut .17s ease-out both;
+  }
+
+  .site-header,
+  .filter-bar-wrap {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .site-header {
+    background: rgba(20, 0, 3, .98);
+  }
+
+  .site-header.is-scrolled {
+    box-shadow: 0 8px 22px rgba(20, 0, 3, .18);
+  }
+
+  .announcement-track,
+  .ticker-track,
+  .hero-logo,
+  .drip-thread,
+  .drip-drop,
+  .red-room-orbit {
+    animation: none !important;
+  }
+
+  .hero-noise,
+  .hero-cursor-glow,
+  .hero-marquee {
+    display: none !important;
+  }
+
+  .hero-drip {
+    opacity: .64;
+  }
+
+  .hero-drip *,
+  .drip-thread,
+  .drip-drop,
+  .drip-surface {
+    filter: none !important;
+  }
+
+  .hero-logo {
+    text-shadow: 0 0 8px rgba(255, 248, 245, .55), 0 0 30px rgba(200, 0, 26, .58);
+  }
+
+  .red-room-copy h2,
+  .page-hero h1 {
+    text-shadow: 0 0 24px rgba(200, 0, 26, .45);
+  }
+
+  .page-hero::before {
+    width: 75vw;
+    height: 75vw;
+    filter: none;
+    opacity: .58;
+  }
+
+  .page-hero-grid,
+  .red-room-lines {
+    -webkit-mask-image: none;
+    mask-image: none;
+    opacity: .34;
+  }
+
+  .hero-image-frame,
+  .preview-card,
+  .menu-catalog-card,
+  .story-poster,
+  .hero-floating-card {
+    box-shadow: 0 14px 34px rgba(20, 0, 3, .16);
+  }
+
+  .preview-card:hover,
+  .menu-catalog-card:hover,
+  .merch-drop-card:hover img,
+  .merch-drop-card:hover .merch-drop-media h2,
+  .menu-catalog-card:hover .menu-catalog-media img {
+    transform: none;
+  }
+
+  .preview-card img,
+  .menu-catalog-media img,
+  .merch-drop-media img,
+  .merch-editorial-media img {
+    transition-duration: .22s;
+  }
+
+  [data-parallax] {
+    transform: none !important;
+  }
+
+  .reveal {
+    transform: translateY(12px);
+    transition-duration: .34s;
+  }
+
+  .footer-topline {
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .announcement {
+    overflow: hidden;
+  }
+
+  .announcement-track {
+    min-width: 100%;
+    justify-content: center;
+    gap: 0;
+    padding-inline: 14px;
+    text-align: center;
+  }
+
+  .announcement-track span:first-child {
+    font-size: .68rem;
+    letter-spacing: .11em;
+    white-space: nowrap;
+  }
+
+  .announcement-track span:not(:first-child),
+  .announcement-track span:first-child::after {
+    display: none;
+  }
+
+  .ticker {
+    display: none;
+  }
+
+  .hero-visual {
+    min-height: 350px;
+  }
+
+  .hero-image-frame {
+    inset: 4% 0 4% 0;
+    transform: none;
+  }
+
+  .hero-floating-card {
+    display: none;
+  }
+
+  .hero-drip {
+    height: 42%;
+  }
+
+  .hero-logo {
+    font-size: clamp(6.4rem, 34vw, 9rem);
+  }
+
+  .hero-tagline {
+    font-size: 2.1rem;
+  }
+
+  .hero-description {
+    line-height: 1.58;
+  }
+
+  .hero-meta {
+    gap: 12px;
+  }
+
+  .preview-section,
+  .story-section,
+  .catalog-section {
+    padding-block: 68px;
+  }
+
+  .map-wrap {
+    min-height: 360px;
+  }
+
+  .menu-card-detail {
+    padding: 26px;
+  }
+
+  .toast {
+    bottom: 14px;
+    box-shadow: 0 10px 26px rgba(20, 0, 3, .2);
+  }
+}
+
+@media (max-width: 920px), (pointer: coarse) {
+  .menu-catalog-media img,
+  .merch-drop-media img,
+  .merch-editorial-media img,
+  .preview-media img,
+  .map-wrap iframe {
+    filter: none !important;
+  }
+}

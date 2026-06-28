@@ -13,3 +13,12 @@ Open index.html in a browser to start.
 
 
 Update: merch product photos and menu item images have been enhanced for better clarity and sharper display.
+
+PHONE PERFORMANCE UPDATE
+------------------------
+- Responsive WebP images (320 / 640 / 960 px) replace heavy PNG/JPG assets.
+- Images below the fold use loading="lazy" and decoding="async".
+- Hero image keeps high fetch priority.
+- Mobile disables cursor glow, parallax, continuous ticker animations and expensive blur effects.
+- Navigation, filters, card expansion, cart counter, toast messages and page transitions are preserved.
+- CSS content-visibility is used on supported mobile browsers to avoid rendering distant sections too early.

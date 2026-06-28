@@ -1,100 +1,87 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Découvrez le menu complet de LOU : pots, cônes et saveurs artisanales à La Marsa.">
-  <meta name="theme-color" content="#140003">
-  <title>Menu — LOU La Marsa</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍦</text></svg>">
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Découvrez le menu complet de LOU : pots, cônes et saveurs artisanales à La Marsa." name="description"/>
+<meta content="#140003" name="theme-color"/>
+<title>Menu — LOU La Marsa</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Barlow+Condensed:wght@500;600;700;800&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;display=swap" rel="stylesheet"/>
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🍦&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+<link href="style.css" rel="stylesheet"/>
+<script defer="" src="script.js"></script>
 </head>
 <body class="page-menu is-entering">
-  <div class="page-transition" aria-hidden="true"><span>MENU</span></div>
-  <div class="announcement"><div class="announcement-track"><span>GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span><span aria-hidden="true">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span><span aria-hidden="true">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span></div></div>
-
-  <header class="site-header" id="siteHeader">
-    <a class="brand" href="index.html" aria-label="Accueil LOU">LOU<span>.</span></a>
-    <nav class="desktop-nav" aria-label="Navigation principale"><a data-nav="home" href="index.html">Accueil</a><a data-nav="menu" href="menu.html">Menu</a><a data-nav="merch" href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Contact</a></nav>
-    <div class="header-actions"><a class="icon-link" href="https://www.instagram.com/loucreate__/" target="_blank" rel="noopener" aria-label="Instagram LOU"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a><a class="cart-button" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" target="_blank" rel="noopener" aria-label="Commander sur Glovo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.4L21 7H7"></path><circle cx="10" cy="20" r="1.4"></circle><circle cx="18" cy="20" r="1.4"></circle></svg><span class="cart-count" id="cartCount">0</span></a><button class="menu-toggle" id="menuToggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button></div>
-    <nav class="mobile-menu" id="mobileMenu" aria-label="Navigation mobile"><a data-nav="home" href="index.html">Accueil</a><a data-nav="menu" href="menu.html">Menu</a><a data-nav="merch" href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Contact</a><a class="mobile-menu-cta" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" target="_blank" rel="noopener">Commander sur Glovo ↗</a></nav>
-  </header>
-
-  <main>
-    <div class="breadcrumb-wrap"><a class="breadcrumb" href="index.html"><span>←</span> Back to Home</a></div>
-
-    <section class="page-hero page-hero-menu">
-      <div class="page-hero-grid" aria-hidden="true"></div>
-      <p class="page-hero-kicker">Pots · Cônes · Saveurs</p>
-      <h1>MENU</h1>
-      <p>Des formats à partager et des parfums qui changent avec la saison.</p>
-    </section>
-
-    <section class="catalog-section catalog-menu">
-      <div class="catalog-intro container reveal"><div><p class="eyebrow eyebrow-red">La sélection</p><h2>Pick your<br>obsession.</h2></div><p>Choisis un format, puis une saveur. Les disponibilités peuvent varier selon le jour et les envies du chef.</p></div>
-
-      <div class="filter-bar-wrap">
-        <div class="filter-bar container" role="group" aria-label="Filtrer le menu">
-          <span class="filter-label">FILTER /</span>
-          <button class="filter-button is-active" type="button" data-filter-group="menu" data-filter="all">Tout</button>
-          <button class="filter-button" type="button" data-filter-group="menu" data-filter="formats">Pots &amp; Cônes</button>
-          <button class="filter-button" type="button" data-filter-group="menu" data-filter="saveurs">Saveurs</button>
-        </div>
-      </div>
-
-      <div class="catalog-grid menu-catalog-grid container" data-filter-grid="menu">
-        <article class="menu-catalog-card reveal" data-category="formats" data-menu-card>
-          <div class="menu-catalog-media"><img src="assets/lou-vitrine.png" alt="Pot 1 litre LOU accompagné de six cônes"><span class="card-number">01</span></div>
-          <div class="menu-catalog-copy"><p class="menu-card-kicker">Format à partager</p><h3>Pot 1 L<br>+ 6 cônes</h3><p>Le format généreux pour une table entière. Choisis ta saveur selon les disponibilités du jour.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>TND</small> 55,000</strong><button class="add-button" type="button" data-product="Pot 1 L + 6 cônes">Ajouter</button></div></div>
-          <div class="menu-card-detail" aria-hidden="true"><span class="utility-label">DÉTAIL</span><p>1 litre · 6 cônes croustillants · saveur au choix.</p><button class="menu-details-toggle" type="button" aria-label="Fermer le détail">×</button></div><button class="menu-card-hit" type="button" aria-label="Voir le détail du Pot 1 L + 6 cônes"></button>
-        </article>
-
-        <article class="menu-catalog-card reveal" data-category="formats" data-menu-card>
-          <div class="menu-catalog-media"><img src="assets/menu-half-pot.jpg" alt="Pot un demi-litre LOU accompagné de trois cônes"><span class="card-number">02</span></div>
-          <div class="menu-catalog-copy"><p class="menu-card-kicker">Format duo</p><h3>Pot 1/2 L<br>+ 3 cônes</h3><p>Le bon format pour deux : compact, généreux et prêt à partager.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>TND</small> 27,500</strong><button class="add-button" type="button" data-product="Pot 1/2 L + 3 cônes">Ajouter</button></div></div>
-          <div class="menu-card-detail" aria-hidden="true"><span class="utility-label">DÉTAIL</span><p>1/2 litre · 3 cônes · saveur au choix selon disponibilité.</p><button class="menu-details-toggle" type="button" aria-label="Fermer le détail">×</button></div><button class="menu-card-hit" type="button" aria-label="Voir le détail du Pot 1/2 L + 3 cônes"></button>
-        </article>
-
-        <article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card>
-          <span class="floating-badge">BEST-SELLER</span><div class="menu-catalog-media"><img src="assets/menu-pistachio.jpg" alt="Glace Pistachio"><span class="card-number">03</span></div>
-          <div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur signature</p><h3>Pistachio</h3><p>Pistache crémeuse, éclats croquants et finale légèrement toastée.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" type="button" data-product="Pistachio">Ajouter</button></div></div>
-          <div class="menu-card-detail" aria-hidden="true"><span class="utility-label">PROFIL</span><p>Pistache ronde · fruits secs · douceur maîtrisée.</p><button class="menu-details-toggle" type="button" aria-label="Fermer le détail">×</button></div><button class="menu-card-hit" type="button" aria-label="Voir le détail de Pistachio"></button>
-        </article>
-
-        <article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card>
-          <div class="menu-catalog-media"><img src="assets/menu-brownie-fix.jpg" alt="The Brownie Fix"><span class="card-number">04</span></div>
-          <div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur signature</p><h3>The<br>Brownie Fix</h3><p>Éclats de brownie, noisettes croquantes et sauce chocolat ultra-gourmande.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" type="button" data-product="The Brownie Fix">Ajouter</button></div></div>
-          <div class="menu-card-detail" aria-hidden="true"><span class="utility-label">PROFIL</span><p>Brownie fondant · noisettes · chocolat · gros contraste.</p><button class="menu-details-toggle" type="button" aria-label="Fermer le détail">×</button></div><button class="menu-card-hit" type="button" aria-label="Voir le détail de The Brownie Fix"></button>
-        </article>
-
-        <article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card>
-          <div class="menu-catalog-media"><img src="assets/menu-valrhona.jpg" alt="Valrhona Dark Chocolate"><span class="card-number">05</span></div>
-          <div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur signature</p><h3>Valrhona<br>Dark Chocolate</h3><p>Chocolat noir intense, texture dense et finale profondément cacaotée.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" type="button" data-product="Valrhona Dark Chocolate">Ajouter</button></div></div>
-          <div class="menu-card-detail" aria-hidden="true"><span class="utility-label">PROFIL</span><p>Cacao profond · intensité nette · douceur maîtrisée.</p><button class="menu-details-toggle" type="button" aria-label="Fermer le détail">×</button></div><button class="menu-card-hit" type="button" aria-label="Voir le détail de Valrhona Dark Chocolate"></button>
-        </article>
-
-        <article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card>
-          <div class="menu-catalog-media"><img src="assets/menu-berrylicious.jpg" alt="Berrylicious"><span class="card-number">06</span></div>
-          <div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur fruitée</p><h3>Berrylicious</h3><p>Une base lactée onctueuse avec un tourbillon généreux de fruits rouges.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" type="button" data-product="Berrylicious">Ajouter</button></div></div>
-          <div class="menu-card-detail" aria-hidden="true"><span class="utility-label">PROFIL</span><p>Fruité · acidulé · ultra-crémeux · éclats croquants.</p><button class="menu-details-toggle" type="button" aria-label="Fermer le détail">×</button></div><button class="menu-card-hit" type="button" aria-label="Voir le détail de Berrylicious"></button>
-        </article>
-
-        <article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card>
-          <div class="menu-catalog-media"><img src="assets/menu-choco-peanut.jpg" alt="Choco Peanut Madness"><span class="card-number">07</span></div>
-          <div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur signature</p><h3>Choco Peanut<br>Madness</h3><p>Chocolat au lait, cacahuète torréfiée et morceaux fondants à chaque cuillère.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" type="button" data-product="Choco Peanut Madness">Ajouter</button></div></div>
-          <div class="menu-card-detail" aria-hidden="true"><span class="utility-label">PROFIL</span><p>Chocolat lacté · peanut roast · salé-sucré généreux.</p><button class="menu-details-toggle" type="button" aria-label="Fermer le détail">×</button></div><button class="menu-card-hit" type="button" aria-label="Voir le détail de Choco Peanut Madness"></button>
-        </article>
-      </div>
-
-      <div class="catalog-cta container reveal"><p>Prêt à choisir ta saveur ?</p><a class="button button-red" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" target="_blank" rel="noopener">Commander sur Glovo ↗</a></div>
-    </section>
-  </main>
-
-  <footer class="site-footer"><div class="footer-watermark" aria-hidden="true">LOU</div><div class="footer-topline"></div><div class="footer-grid container"><div class="footer-intro"><a class="footer-brand" href="index.html">LOU<span>.</span></a><p>Glaces artisanales.<br>Crimson mood.<br>La Marsa, Tunis.</p></div><div class="footer-column"><span>EXPLORE</span><a href="index.html">Accueil</a><a href="menu.html">Menu</a><a href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a></div><div class="footer-column"><span>VISIT</span><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Location</a><a href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" target="_blank" rel="noopener">Commander ↗</a></div><div class="footer-column"><span>FOLLOW</span><a href="https://www.instagram.com/loucreate__/" target="_blank" rel="noopener">Instagram ↗</a><a href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" target="_blank" rel="noopener">Glovo ↗</a></div></div><div class="footer-bottom container"><span>© 2026 LOU. Tous droits réservés.</span><span>THE RED ROOM · LA MARSA</span></div></footer>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div aria-hidden="true" class="page-transition"><span>MENU</span></div>
+<div class="announcement"><div class="announcement-track"><span>GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span><span aria-hidden="true">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span><span aria-hidden="true">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span></div></div>
+<header class="site-header" id="siteHeader">
+<a aria-label="Accueil LOU" class="brand" href="index.html">LOU<span>.</span></a>
+<nav aria-label="Navigation principale" class="desktop-nav"><a data-nav="home" href="index.html">Accueil</a><a data-nav="menu" href="menu.html">Menu</a><a data-nav="merch" href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Contact</a></nav>
+<div class="header-actions"><a aria-label="Instagram LOU" class="icon-link" href="https://www.instagram.com/loucreate__/" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a><a aria-label="Commander sur Glovo" class="cart-button" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.4L21 7H7"></path><circle cx="10" cy="20" r="1.4"></circle><circle cx="18" cy="20" r="1.4"></circle></svg><span class="cart-count" id="cartCount">0</span></a><button aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" id="menuToggle" type="button"><span></span><span></span></button></div>
+<nav aria-label="Navigation mobile" class="mobile-menu" id="mobileMenu"><a data-nav="home" href="index.html">Accueil</a><a data-nav="menu" href="menu.html">Menu</a><a data-nav="merch" href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Contact</a><a class="mobile-menu-cta" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Commander sur Glovo ↗</a></nav>
+</header>
+<main>
+<div class="breadcrumb-wrap"><a class="breadcrumb" href="index.html"><span>←</span> Back to Home</a></div>
+<section class="page-hero page-hero-menu">
+<div aria-hidden="true" class="page-hero-grid"></div>
+<p class="page-hero-kicker">Pots · Cônes · Saveurs</p>
+<h1>MENU</h1>
+<p>Des formats à partager et des parfums qui changent avec la saison.</p>
+</section>
+<section class="catalog-section catalog-menu">
+<div class="catalog-intro container reveal"><div><p class="eyebrow eyebrow-red">La sélection</p><h2>Pick your<br/>obsession.</h2></div><p>Choisis un format, puis une saveur. Les disponibilités peuvent varier selon le jour et les envies du chef.</p></div>
+<div class="filter-bar-wrap">
+<div aria-label="Filtrer le menu" class="filter-bar container" role="group">
+<span class="filter-label">FILTER /</span>
+<button class="filter-button is-active" data-filter="all" data-filter-group="menu" type="button">Tout</button>
+<button class="filter-button" data-filter="formats" data-filter-group="menu" type="button">Pots &amp; Cônes</button>
+<button class="filter-button" data-filter="saveurs" data-filter-group="menu" type="button">Saveurs</button>
+</div>
+</div>
+<div class="catalog-grid menu-catalog-grid container" data-filter-grid="menu">
+<article class="menu-catalog-card reveal" data-category="formats" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Pot 1 litre LOU accompagné de six cônes" decoding="async" height="1035" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/lou-vitrine-640.webp" srcset="assets/lou-vitrine-320.webp 320w, assets/lou-vitrine-640.webp 640w, assets/lou-vitrine-960.webp 960w" width="960"/><span class="card-number">01</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Format à partager</p><h3>Pot 1 L<br/>+ 6 cônes</h3><p>Le format généreux pour une table entière. Choisis ta saveur selon les disponibilités du jour.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>TND</small> 55,000</strong><button class="add-button" data-product="Pot 1 L + 6 cônes" type="button">Ajouter</button></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>1 litre · 6 cônes croustillants · saveur au choix.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail du Pot 1 L + 6 cônes" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="formats" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Pot un demi-litre LOU accompagné de trois cônes" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-half-pot-640.webp" srcset="assets/menu-half-pot-320.webp 320w, assets/menu-half-pot-640.webp 640w, assets/menu-half-pot-960.webp 960w" width="960"/><span class="card-number">02</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Format duo</p><h3>Pot 1/2 L<br/>+ 3 cônes</h3><p>Le bon format pour deux : compact, généreux et prêt à partager.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>TND</small> 27,500</strong><button class="add-button" data-product="Pot 1/2 L + 3 cônes" type="button">Ajouter</button></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>1/2 litre · 3 cônes · saveur au choix selon disponibilité.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail du Pot 1/2 L + 3 cônes" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card="">
+<span class="floating-badge">BEST-SELLER</span><div class="menu-catalog-media"><img alt="Glace Pistachio" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-pistachio-640.webp" srcset="assets/menu-pistachio-320.webp 320w, assets/menu-pistachio-640.webp 640w, assets/menu-pistachio-960.webp 960w" width="960"/><span class="card-number">03</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur signature</p><h3>Pistachio</h3><p>Pistache crémeuse, éclats croquants et finale légèrement toastée.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" data-product="Pistachio" type="button">Ajouter</button></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">PROFIL</span><p>Pistache ronde · fruits secs · douceur maîtrisée.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Pistachio" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card="">
+<div class="menu-catalog-media"><img alt="The Brownie Fix" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-brownie-fix-640.webp" srcset="assets/menu-brownie-fix-320.webp 320w, assets/menu-brownie-fix-640.webp 640w, assets/menu-brownie-fix-960.webp 960w" width="960"/><span class="card-number">04</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur signature</p><h3>The<br/>Brownie Fix</h3><p>Éclats de brownie, noisettes croquantes et sauce chocolat ultra-gourmande.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" data-product="The Brownie Fix" type="button">Ajouter</button></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">PROFIL</span><p>Brownie fondant · noisettes · chocolat · gros contraste.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de The Brownie Fix" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Valrhona Dark Chocolate" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-valrhona-640.webp" srcset="assets/menu-valrhona-320.webp 320w, assets/menu-valrhona-640.webp 640w, assets/menu-valrhona-960.webp 960w" width="960"/><span class="card-number">05</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur signature</p><h3>Valrhona<br/>Dark Chocolate</h3><p>Chocolat noir intense, texture dense et finale profondément cacaotée.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" data-product="Valrhona Dark Chocolate" type="button">Ajouter</button></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">PROFIL</span><p>Cacao profond · intensité nette · douceur maîtrisée.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Valrhona Dark Chocolate" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Berrylicious" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-berrylicious-640.webp" srcset="assets/menu-berrylicious-320.webp 320w, assets/menu-berrylicious-640.webp 640w, assets/menu-berrylicious-960.webp 960w" width="960"/><span class="card-number">06</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur fruitée</p><h3>Berrylicious</h3><p>Une base lactée onctueuse avec un tourbillon généreux de fruits rouges.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" data-product="Berrylicious" type="button">Ajouter</button></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">PROFIL</span><p>Fruité · acidulé · ultra-crémeux · éclats croquants.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Berrylicious" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Choco Peanut Madness" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-choco-peanut-640.webp" srcset="assets/menu-choco-peanut-320.webp 320w, assets/menu-choco-peanut-640.webp 640w, assets/menu-choco-peanut-960.webp 960w" width="960"/><span class="card-number">07</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur signature</p><h3>Choco Peanut<br/>Madness</h3><p>Chocolat au lait, cacahuète torréfiée et morceaux fondants à chaque cuillère.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" data-product="Choco Peanut Madness" type="button">Ajouter</button></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">PROFIL</span><p>Chocolat lacté · peanut roast · salé-sucré généreux.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Choco Peanut Madness" class="menu-card-hit" type="button"></button>
+</article>
+</div>
+<div class="catalog-cta container reveal"><p>Prêt à choisir ta saveur ?</p><a class="button button-red" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Commander sur Glovo ↗</a></div>
+</section>
+</main>
+<footer class="site-footer"><div aria-hidden="true" class="footer-watermark">LOU</div><div class="footer-topline"></div><div class="footer-grid container"><div class="footer-intro"><a class="footer-brand" href="index.html">LOU<span>.</span></a><p>Glaces artisanales.<br/>Crimson mood.<br/>La Marsa, Tunis.</p></div><div class="footer-column"><span>EXPLORE</span><a href="index.html">Accueil</a><a href="menu.html">Menu</a><a href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a></div><div class="footer-column"><span>VISIT</span><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Location</a><a href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Commander ↗</a></div><div class="footer-column"><span>FOLLOW</span><a href="https://www.instagram.com/loucreate__/" rel="noopener" target="_blank">Instagram ↗</a><a href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Glovo ↗</a></div></div><div class="footer-bottom container"><span>© 2026 LOU. Tous droits réservés.</span><span>THE RED ROOM · LA MARSA</span></div></footer>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
 </body>
 </html>
