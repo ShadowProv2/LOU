@@ -1,8 +1,6 @@
 const header = document.getElementById('siteHeader');
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
-const cartCount = document.getElementById('cartCount');
-const toast = document.getElementById('toast');
 const hero = document.getElementById('accueil');
 const heroCursorGlow = document.getElementById('heroCursorGlow');
 
@@ -13,22 +11,10 @@ const performanceLite = mobileQuery.matches || reducedMotion || Boolean(connecti
 
 document.body.classList.toggle('performance-lite', performanceLite);
 
-let cartItems = Number(sessionStorage.getItem('lou-cart-count') || 0);
-let toastTimer;
 let headerFrame = 0;
 let parallaxFrame = 0;
 
-if (cartCount) cartCount.textContent = String(cartItems);
 
-// Keep the red page transition, but make it much faster on phones.
-document.body.classList.add('is-entering');
-window.setTimeout(
-  () => document.body.classList.remove('is-entering'),
-  performanceLite ? 240 : 800,
-);
-window.addEventListener('pageshow', () => {
-  document.body.classList.remove('is-leaving', 'is-entering');
-});
 
 // Pause all decorative animation while the tab is hidden.
 document.addEventListener('visibilitychange', () => {
@@ -71,25 +57,7 @@ window.addEventListener('resize', () => {
   if (window.innerWidth > 920) closeMobileMenu();
 }, { passive: true });
 
-function showToast(message) {
-  if (!toast) return;
-  window.clearTimeout(toastTimer);
-  toast.textContent = message;
-  toast.classList.add('is-visible');
-  toastTimer = window.setTimeout(() => toast.classList.remove('is-visible'), 1900);
-}
 
-// Use one delegated listener instead of one listener for every button.
-document.addEventListener('click', (event) => {
-  const addButton = event.target.closest('.add-button');
-  if (!addButton) return;
-
-  event.stopPropagation();
-  cartItems += 1;
-  sessionStorage.setItem('lou-cart-count', String(cartItems));
-  if (cartCount) cartCount.textContent = String(cartItems);
-  showToast(`${addButton.dataset.product} ajouté à ta sélection.`);
-});
 
 // Menu card expansion remains available for mouse, touch and keyboard users.
 document.querySelectorAll('[data-menu-card]').forEach((card) => {
@@ -214,24 +182,3 @@ if (parallaxItems.length) {
   updateParallax();
 }
 
-// Brief red wipe between internal HTML pages.
-document.querySelectorAll('a[href]').forEach((link) => {
-  link.addEventListener('click', (event) => {
-    if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
-    if (link.target === '_blank' || link.hasAttribute('download')) return;
-
-    const rawHref = link.getAttribute('href');
-    if (!rawHref || rawHref.startsWith('#') || rawHref.startsWith('mailto:') || rawHref.startsWith('tel:')) return;
-
-    const url = new URL(link.href, window.location.href);
-    const sameOrigin = url.origin === window.location.origin;
-    const internalHtml = /\.html$/.test(url.pathname);
-    if (!sameOrigin || !internalHtml) return;
-    if (url.pathname === window.location.pathname && url.search === window.location.search && url.hash) return;
-
-    event.preventDefault();
-    closeMobileMenu();
-    document.body.classList.add('is-leaving');
-    window.setTimeout(() => window.location.assign(url.href), performanceLite ? 170 : 470);
-  });
-});

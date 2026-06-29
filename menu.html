@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Découvrez le menu complet de LOU : pots, cônes et saveurs artisanales à La Marsa." name="description"/>
+<meta content="Découvrez le menu complet de LOU : gâteaux glacés, pots 1L et 6 cônes, et formats 1/2L à La Marsa." name="description"/>
 <meta content="#140003" name="theme-color"/>
 <title>Menu — LOU La Marsa</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -14,74 +14,180 @@
 <link href="style.css" rel="stylesheet"/>
 <script defer="" src="script.js"></script>
 </head>
-<body class="page-menu is-entering">
-<div aria-hidden="true" class="page-transition"><span>MENU</span></div>
+<body class="page-menu">
+<div id="split-overlay" aria-hidden="true">
+<div class="split-top"></div>
+<div class="split-bottom"></div>
+<div class="split-logo">LOU<span>.</span></div>
+</div>
 <div class="announcement"><div class="announcement-track"><span>GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span><span aria-hidden="true">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span><span aria-hidden="true">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span></div></div>
 <header class="site-header" id="siteHeader">
 <a aria-label="Accueil LOU" class="brand" href="index.html">LOU<span>.</span></a>
 <nav aria-label="Navigation principale" class="desktop-nav"><a data-nav="home" href="index.html">Accueil</a><a data-nav="menu" href="menu.html">Menu</a><a data-nav="merch" href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Contact</a></nav>
-<div class="header-actions"><a aria-label="Instagram LOU" class="icon-link" href="https://www.instagram.com/loucreate__/" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a><a aria-label="Commander sur Glovo" class="cart-button" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.4L21 7H7"></path><circle cx="10" cy="20" r="1.4"></circle><circle cx="18" cy="20" r="1.4"></circle></svg><span class="cart-count" id="cartCount">0</span></a><button aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" id="menuToggle" type="button"><span></span><span></span></button></div>
+<div class="header-actions"><a aria-label="Instagram LOU" class="icon-link" href="https://www.instagram.com/loucreate__/" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a><button aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" id="menuToggle" type="button"><span></span><span></span></button></div>
 <nav aria-label="Navigation mobile" class="mobile-menu" id="mobileMenu"><a data-nav="home" href="index.html">Accueil</a><a data-nav="menu" href="menu.html">Menu</a><a data-nav="merch" href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Contact</a><a class="mobile-menu-cta" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Commander sur Glovo ↗</a></nav>
 </header>
 <main>
 <div class="breadcrumb-wrap"><a class="breadcrumb" href="index.html"><span>←</span> Back to Home</a></div>
-<section class="page-hero page-hero-menu">
+<section aria-labelledby="menu-page-title" class="page-hero page-hero-menu">
 <div aria-hidden="true" class="page-hero-grid"></div>
-<p class="page-hero-kicker">Pots · Cônes · Saveurs</p>
-<h1>MENU</h1>
-<p>Des formats à partager et des parfums qui changent avec la saison.</p>
+<div aria-hidden="true" class="page-hero-watermark">MENU</div>
+<div class="page-hero-content">
+<p class="page-hero-kicker">3 types · Gâteaux glacés · Pots 1L · Formats duo</p>
+<h1 id="menu-page-title">Menu LOU</h1>
+</div>
 </section>
+<div class="page-hero-description-strip">
+<p>Tout le menu LOU en un seul endroit : gâteaux glacés, pots 1L avec 6 cônes, et format 1/2L avec 3 cônes.</p>
+</div>
 <section class="catalog-section catalog-menu">
-<div class="catalog-intro container reveal"><div><p class="eyebrow eyebrow-red">La sélection</p><h2>Pick your<br/>obsession.</h2></div><p>Choisis un format, puis une saveur. Les disponibilités peuvent varier selon le jour et les envies du chef.</p></div>
+<div class="catalog-intro container reveal"><div><p class="eyebrow eyebrow-red">Le menu complet</p><h2>Choose your<br/>craving.</h2></div><p>Trois formats, une même signature : des textures généreuses, des parfums intenses et tout l’univers LOU dans chaque carte.</p></div>
 <div class="filter-bar-wrap">
 <div aria-label="Filtrer le menu" class="filter-bar container" role="group">
 <span class="filter-label">FILTER /</span>
 <button class="filter-button is-active" data-filter="all" data-filter-group="menu" type="button">Tout</button>
-<button class="filter-button" data-filter="formats" data-filter-group="menu" type="button">Pots &amp; Cônes</button>
-<button class="filter-button" data-filter="saveurs" data-filter-group="menu" type="button">Saveurs</button>
+<button class="filter-button" data-filter="gateaux" data-filter-group="menu" type="button">Gâteaux glacés</button>
+<button class="filter-button" data-filter="pot1l" data-filter-group="menu" type="button">Pot 1L et 6 cônes</button>
+<button class="filter-button" data-filter="pot12l" data-filter-group="menu" type="button">Pot 1/2L et 3 cônes</button>
 </div>
 </div>
 <div class="catalog-grid menu-catalog-grid container" data-filter-grid="menu">
-<article class="menu-catalog-card reveal" data-category="formats" data-menu-card="">
-<div class="menu-catalog-media"><img alt="Pot 1 litre LOU accompagné de six cônes" decoding="async" height="1035" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/lou-vitrine-640.webp" srcset="assets/lou-vitrine-320.webp 320w, assets/lou-vitrine-640.webp 640w, assets/lou-vitrine-960.webp 960w" width="960"/><span class="card-number">01</span></div>
-<div class="menu-catalog-copy"><p class="menu-card-kicker">Format à partager</p><h3>Pot 1 L<br/>+ 6 cônes</h3><p>Le format généreux pour une table entière. Choisis ta saveur selon les disponibilités du jour.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>TND</small> 55,000</strong><button class="add-button" data-product="Pot 1 L + 6 cônes" type="button">Ajouter</button></div></div>
-<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>1 litre · 6 cônes croustillants · saveur au choix.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail du Pot 1 L + 6 cônes" class="menu-card-hit" type="button"></button>
+<article class="menu-catalog-card reveal" data-category="gateaux" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Gâteau glacé Everything Pistacio" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-everything-pistacio-640.webp" srcset="assets/menu-everything-pistacio-320.webp 320w, assets/menu-everything-pistacio-640.webp 640w, assets/menu-everything-pistacio-960.webp 960w" width="960"/><span class="card-number">01</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Gâteau glacé</p><h3>Everything
+Pistacio</h3><p>Une création glacée à la pistache, simple, élégante et ultra gourmande.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>TND</small> 15,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Gâteau glacé individuel · pistache · service frais.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Everything Pistacio" class="menu-card-hit" type="button"></button>
 </article>
-<article class="menu-catalog-card reveal" data-category="formats" data-menu-card="">
-<div class="menu-catalog-media"><img alt="Pot un demi-litre LOU accompagné de trois cônes" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-half-pot-640.webp" srcset="assets/menu-half-pot-320.webp 320w, assets/menu-half-pot-640.webp 640w, assets/menu-half-pot-960.webp 960w" width="960"/><span class="card-number">02</span></div>
-<div class="menu-catalog-copy"><p class="menu-card-kicker">Format duo</p><h3>Pot 1/2 L<br/>+ 3 cônes</h3><p>Le bon format pour deux : compact, généreux et prêt à partager.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>TND</small> 27,500</strong><button class="add-button" data-product="Pot 1/2 L + 3 cônes" type="button">Ajouter</button></div></div>
-<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>1/2 litre · 3 cônes · saveur au choix selon disponibilité.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail du Pot 1/2 L + 3 cônes" class="menu-card-hit" type="button"></button>
+<article class="menu-catalog-card reveal" data-category="gateaux" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Magnum Coffee Please" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-magnum-coffee-please-640.webp" srcset="assets/menu-magnum-coffee-please-320.webp 320w, assets/menu-magnum-coffee-please-640.webp 640w, assets/menu-magnum-coffee-please-960.webp 960w" width="960"/><span class="card-number">02</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Gâteau glacé</p><h3>Magnum
+Coffee Please</h3><p>Un bâtonnet glacé au café avec un enrobage chocolat qui fait tout le contraste.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>TND</small> 12,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Bâtonnet glacé · café · enrobage chocolat.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Magnum Coffee Please" class="menu-card-hit" type="button"></button>
 </article>
-<article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card="">
-<span class="floating-badge">BEST-SELLER</span><div class="menu-catalog-media"><img alt="Glace Pistachio" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-pistachio-640.webp" srcset="assets/menu-pistachio-320.webp 320w, assets/menu-pistachio-640.webp 640w, assets/menu-pistachio-960.webp 960w" width="960"/><span class="card-number">03</span></div>
-<div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur signature</p><h3>Pistachio</h3><p>Pistache crémeuse, éclats croquants et finale légèrement toastée.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" data-product="Pistachio" type="button">Ajouter</button></div></div>
-<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">PROFIL</span><p>Pistache ronde · fruits secs · douceur maîtrisée.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Pistachio" class="menu-card-hit" type="button"></button>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Valrhona Dark Chocolate" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-valrhona-640.webp" srcset="assets/menu-valrhona-320.webp 320w, assets/menu-valrhona-640.webp 640w, assets/menu-valrhona-960.webp 960w" width="960"/><span class="card-number">03</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Valrhona
+Dark Chocolate</h3><p>Un chocolat noir profond et lisse, pour les amateurs de cacao intense.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · chocolat noir intense.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Valrhona Dark Chocolate" class="menu-card-hit" type="button"></button>
 </article>
-<article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card="">
-<div class="menu-catalog-media"><img alt="The Brownie Fix" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-brownie-fix-640.webp" srcset="assets/menu-brownie-fix-320.webp 320w, assets/menu-brownie-fix-640.webp 640w, assets/menu-brownie-fix-960.webp 960w" width="960"/><span class="card-number">04</span></div>
-<div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur signature</p><h3>The<br/>Brownie Fix</h3><p>Éclats de brownie, noisettes croquantes et sauce chocolat ultra-gourmande.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" data-product="The Brownie Fix" type="button">Ajouter</button></div></div>
-<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">PROFIL</span><p>Brownie fondant · noisettes · chocolat · gros contraste.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de The Brownie Fix" class="menu-card-hit" type="button"></button>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Berrylicious" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-berrylicious-640.webp" srcset="assets/menu-berrylicious-320.webp 320w, assets/menu-berrylicious-640.webp 640w, assets/menu-berrylicious-960.webp 960w" width="960"/><span class="card-number">04</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Berrylicious</h3><p>Une base crémeuse marbrée de fruits rouges pour une note fraîche et acidulée.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · fruits rouges · texture crémeuse.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Berrylicious" class="menu-card-hit" type="button"></button>
 </article>
-<article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card="">
-<div class="menu-catalog-media"><img alt="Valrhona Dark Chocolate" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-valrhona-640.webp" srcset="assets/menu-valrhona-320.webp 320w, assets/menu-valrhona-640.webp 640w, assets/menu-valrhona-960.webp 960w" width="960"/><span class="card-number">05</span></div>
-<div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur signature</p><h3>Valrhona<br/>Dark Chocolate</h3><p>Chocolat noir intense, texture dense et finale profondément cacaotée.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" data-product="Valrhona Dark Chocolate" type="button">Ajouter</button></div></div>
-<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">PROFIL</span><p>Cacao profond · intensité nette · douceur maîtrisée.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Valrhona Dark Chocolate" class="menu-card-hit" type="button"></button>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<span class="floating-badge">BEST-SELLER</span><div class="menu-catalog-media"><img alt="The Brownie Fix" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-brownie-fix-640.webp" srcset="assets/menu-brownie-fix-320.webp 320w, assets/menu-brownie-fix-640.webp 640w, assets/menu-brownie-fix-960.webp 960w" width="960"/><span class="card-number">05</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>The
+Brownie Fix</h3><p>Brownie, noisettes et chocolat : le parfum ultra gourmand du menu.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · brownie · noisette · chocolat.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de The Brownie Fix" class="menu-card-hit" type="button"></button>
 </article>
-<article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card="">
-<div class="menu-catalog-media"><img alt="Berrylicious" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-berrylicious-640.webp" srcset="assets/menu-berrylicious-320.webp 320w, assets/menu-berrylicious-640.webp 640w, assets/menu-berrylicious-960.webp 960w" width="960"/><span class="card-number">06</span></div>
-<div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur fruitée</p><h3>Berrylicious</h3><p>Une base lactée onctueuse avec un tourbillon généreux de fruits rouges.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" data-product="Berrylicious" type="button">Ajouter</button></div></div>
-<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">PROFIL</span><p>Fruité · acidulé · ultra-crémeux · éclats croquants.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Berrylicious" class="menu-card-hit" type="button"></button>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Pistachio" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-pistachio-640.webp" srcset="assets/menu-pistachio-320.webp 320w, assets/menu-pistachio-640.webp 640w, assets/menu-pistachio-960.webp 960w" width="960"/><span class="card-number">06</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Pistachio</h3><p>Une pistache crémeuse avec une vraie profondeur et de beaux éclats croquants.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · pistache · croquant.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Pistachio" class="menu-card-hit" type="button"></button>
 </article>
-<article class="menu-catalog-card reveal" data-category="saveurs" data-menu-card="">
-<div class="menu-catalog-media"><img alt="Choco Peanut Madness" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-choco-peanut-640.webp" srcset="assets/menu-choco-peanut-320.webp 320w, assets/menu-choco-peanut-640.webp 640w, assets/menu-choco-peanut-960.webp 960w" width="960"/><span class="card-number">07</span></div>
-<div class="menu-catalog-copy"><p class="menu-card-kicker">Saveur signature</p><h3>Choco Peanut<br/>Madness</h3><p>Chocolat au lait, cacahuète torréfiée et morceaux fondants à chaque cuillère.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1 L</small> 55,000</strong><button class="add-button" data-product="Choco Peanut Madness" type="button">Ajouter</button></div></div>
-<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">PROFIL</span><p>Chocolat lacté · peanut roast · salé-sucré généreux.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Choco Peanut Madness" class="menu-card-hit" type="button"></button>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Madagascar Vanilla" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-madagascar-vanilla-640.webp" srcset="assets/menu-madagascar-vanilla-320.webp 320w, assets/menu-madagascar-vanilla-640.webp 640w, assets/menu-madagascar-vanilla-960.webp 960w" width="960"/><span class="card-number">07</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Madagascar
+Vanilla</h3><p>Une vanille douce et veloutée, parfaite pour les goûts classiques bien faits.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · vanille de Madagascar.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Madagascar Vanilla" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Mango Passion" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-mango-passion-640.webp" srcset="assets/menu-mango-passion-320.webp 320w, assets/menu-mango-passion-640.webp 640w, assets/menu-mango-passion-960.webp 960w" width="960"/><span class="card-number">08</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Mango
+Passion</h3><p>Un parfum solaire, fruité et vif autour de la mangue et du fruit de la passion.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · mangue · passion.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Mango Passion" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Tiramisalma" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-tiramisalma-640.webp" srcset="assets/menu-tiramisalma-320.webp 320w, assets/menu-tiramisalma-640.webp 640w, assets/menu-tiramisalma-960.webp 960w" width="960"/><span class="card-number">09</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Tiramisalma</h3><p>Un profil cacao-café inspiré du tiramisu, rond et généreux.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · cacao · café · esprit tiramisu.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Tiramisalma" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Gianduja" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-gianduja-640.webp" srcset="assets/menu-gianduja-320.webp 320w, assets/menu-gianduja-640.webp 640w, assets/menu-gianduja-960.webp 960w" width="960"/><span class="card-number">10</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Gianduja</h3><p>Un mélange onctueux chocolat-noisette à l’italienne, riche et fondant.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · gianduja · noisette.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Gianduja" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Joe's Peanut Butter" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-joes-peanut-butter-640.webp" srcset="assets/menu-joes-peanut-butter-320.webp 320w, assets/menu-joes-peanut-butter-640.webp 640w, assets/menu-joes-peanut-butter-960.webp 960w" width="960"/><span class="card-number">11</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Joe's Peanut
+Butter</h3><p>Beurre de cacahuète, caramel et gourmandise XXL dans chaque cuillerée.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · peanut butter · caramel.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Joe's Peanut Butter" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Banoffee" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-banoffee-640.webp" srcset="assets/menu-banoffee-320.webp 320w, assets/menu-banoffee-640.webp 640w, assets/menu-banoffee-960.webp 960w" width="960"/><span class="card-number">12</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Banoffee</h3><p>Banane, biscuit et caramel pour une saveur très dessert, très addictive.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · banane · biscuit · caramel.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Banoffee" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Coffee Please" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-coffee-please-640.webp" srcset="assets/menu-coffee-please-320.webp 320w, assets/menu-coffee-please-640.webp 640w, assets/menu-coffee-please-960.webp 960w" width="960"/><span class="card-number">13</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Coffee
+Please</h3><p>Un parfum café onctueux et équilibré, taillé pour les vrais coffee lovers.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · café · texture onctueuse.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Coffee Please" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Blueberry Cheesecake" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-blueberry-cheesecake-640.webp" srcset="assets/menu-blueberry-cheesecake-320.webp 320w, assets/menu-blueberry-cheesecake-640.webp 640w, assets/menu-blueberry-cheesecake-960.webp 960w" width="960"/><span class="card-number">14</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Blueberry
+Cheesecake</h3><p>Myrtille, cheesecake et base crémeuse : un parfum doux avec une touche fruitée.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · cheesecake · myrtille.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Blueberry Cheesecake" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Amarena" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-amarena-640.webp" srcset="assets/menu-amarena-320.webp 320w, assets/menu-amarena-640.webp 640w, assets/menu-amarena-960.webp 960w" width="960"/><span class="card-number">15</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Amarena</h3><p>Un marbrage fruité et intense autour de la cerise amarena.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · cerise amarena · note fruitée.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Amarena" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Ricotta Figue" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-ricotta-figue-640.webp" srcset="assets/menu-ricotta-figue-320.webp 320w, assets/menu-ricotta-figue-640.webp 640w, assets/menu-ricotta-figue-960.webp 960w" width="960"/><span class="card-number">16</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Ricotta
+Figue</h3><p>Une association fine entre la douceur de la ricotta et la figue.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · ricotta · figue.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Ricotta Figue" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Lemon Sorbet" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-lemon-sorbet-640.webp" srcset="assets/menu-lemon-sorbet-320.webp 320w, assets/menu-lemon-sorbet-640.webp 640w, assets/menu-lemon-sorbet-960.webp 960w" width="960"/><span class="card-number">17</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Lemon
+Sorbet</h3><p>Un sorbet citron franc, frais et désaltérant, parfait pour finir léger.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · sorbet citron · très frais.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Lemon Sorbet" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Raspberry Sorbet" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-raspberry-sorbet-640.webp" srcset="assets/menu-raspberry-sorbet-320.webp 320w, assets/menu-raspberry-sorbet-640.webp 640w, assets/menu-raspberry-sorbet-960.webp 960w" width="960"/><span class="card-number">18</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Raspberry
+Sorbet</h3><p>Un sorbet framboise à la fois vif, acidulé et intensément fruité.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · sorbet framboise.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Raspberry Sorbet" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Strawberry Sorbet" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-strawberry-sorbet-640.webp" srcset="assets/menu-strawberry-sorbet-320.webp 320w, assets/menu-strawberry-sorbet-640.webp 640w, assets/menu-strawberry-sorbet-960.webp 960w" width="960"/><span class="card-number">19</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Strawberry
+Sorbet</h3><p>Une fraise fraîche et pleine de caractère dans une texture très lisse.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · sorbet fraise.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Strawberry Sorbet" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="pot1l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Pêche Melba Sorbet" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-peche-melba-sorbet-640.webp" srcset="assets/menu-peche-melba-sorbet-320.webp 320w, assets/menu-peche-melba-sorbet-640.webp 640w, assets/menu-peche-melba-sorbet-960.webp 960w" width="960"/><span class="card-number">20</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1L et 6 cônes</p><h3>Pêche Melba
+Sorbet</h3><p>Une lecture fruitée et élégante de la pêche Melba, fraîche et lumineuse.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>POT 1L</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Pot 1L + 6 cônes · pêche Melba · sorbet fruité.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Pêche Melba Sorbet" class="menu-card-hit" type="button"></button>
+</article>
+<article class="menu-catalog-card reveal" data-category="pot12l" data-menu-card="">
+<div class="menu-catalog-media"><img alt="Pot 1/2L + 3 Cones" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 320px" src="assets/menu-half-pot-640.webp" srcset="assets/menu-half-pot-320.webp 320w, assets/menu-half-pot-640.webp 640w, assets/menu-half-pot-960.webp 960w" width="960"/><span class="card-number">21</span></div>
+<div class="menu-catalog-copy"><p class="menu-card-kicker">Pot 1/2L et 3 cônes</p><h3>Pot 1/2L
++ 3 Cones</h3><p>Le format duo de LOU : un demi-litre généreux accompagné de trois cônes.</p><div class="menu-catalog-bottom"><strong class="price-tag"><small>FORMAT</small> 27,500</strong><span class="availability-note">Disponible via Glovo</span></div></div>
+<div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Format duo · 1/2 litre · 3 cônes.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Pot 1/2L + 3 Cones" class="menu-card-hit" type="button"></button>
 </article>
 </div>
-<div class="catalog-cta container reveal"><p>Prêt à choisir ta saveur ?</p><a class="button button-red" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Commander sur Glovo ↗</a></div>
+
+<section aria-labelledby="glovo-menu-title" class="glovo-menu-cta">
+<div class="glovo-menu-cta-inner container">
+<div class="glovo-menu-cta-copy">
+<h2 id="glovo-menu-title">Envie d'une LOU chez vous ?</h2>
+<p>Commandez via Glovo — livraison rapide à La Marsa et environs.</p>
+</div>
+<a class="button glovo-menu-button" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">COMMANDER SUR GLOVO →</a>
+</div>
+</section>
+
 </section>
 </main>
 <footer class="site-footer"><div aria-hidden="true" class="footer-watermark">LOU</div><div class="footer-topline"></div><div class="footer-grid container"><div class="footer-intro"><a class="footer-brand" href="index.html">LOU<span>.</span></a><p>Glaces artisanales.<br/>Crimson mood.<br/>La Marsa, Tunis.</p></div><div class="footer-column"><span>EXPLORE</span><a href="index.html">Accueil</a><a href="menu.html">Menu</a><a href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a></div><div class="footer-column"><span>VISIT</span><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Location</a><a href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Commander ↗</a></div><div class="footer-column"><span>FOLLOW</span><a href="https://www.instagram.com/loucreate__/" rel="noopener" target="_blank">Instagram ↗</a><a href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Glovo ↗</a></div></div><div class="footer-bottom container"><span>© 2026 LOU. Tous droits réservés.</span><span>THE RED ROOM · LA MARSA</span></div></footer>
-<div aria-live="polite" class="toast" id="toast" role="status"></div>
+
+<script src="transitions.js" defer></script>
 </body>
 </html>

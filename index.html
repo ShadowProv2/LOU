@@ -14,8 +14,12 @@
 <link href="style.css" rel="stylesheet"/>
 <script defer="" src="script.js"></script>
 </head>
-<body class="page-home is-entering">
-<div aria-hidden="true" class="page-transition"><span>LOU.</span></div>
+<body class="page-home">
+<div id="split-overlay" aria-hidden="true">
+<div class="split-top"></div>
+<div class="split-bottom"></div>
+<div class="split-logo">LOU<span>.</span></div>
+</div>
 <div aria-label="Informations pratiques" class="announcement">
 <div class="announcement-track">
 <span>GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span>
@@ -37,10 +41,6 @@
 <a aria-label="Instagram LOU" class="icon-link" href="https://www.instagram.com/loucreate__/" rel="noopener" target="_blank">
 <svg aria-hidden="true" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
 </a>
-<a aria-label="Commander sur Glovo" class="cart-button" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">
-<svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.4L21 7H7"></path><circle cx="10" cy="20" r="1.4"></circle><circle cx="18" cy="20" r="1.4"></circle></svg>
-<span class="cart-count" id="cartCount">0</span>
-</a>
 <button aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" id="menuToggle" type="button"><span></span><span></span></button>
 </div>
 <nav aria-label="Navigation mobile" class="mobile-menu" id="mobileMenu">
@@ -55,20 +55,7 @@
 </header>
 <main>
 <section class="hero hero-home" id="accueil">
-<div aria-hidden="true" class="hero-cursor-glow" id="heroCursorGlow"></div>
-<svg aria-hidden="true" class="hero-drip" preserveaspectratio="none" viewbox="0 0 1600 900">
-<defs>
-<lineargradient id="dripGradient" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#C8001A" stop-opacity=".98"></stop><stop offset="100%" stop-color="#3D0008" stop-opacity=".9"></stop></lineargradient>
-<filter height="160%" id="dripGlow" width="160%" x="-30%" y="-30%"><fegaussianblur result="blur" stddeviation="18"></fegaussianblur><femerge><femergenode in="blur"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
-</defs>
-<path class="drip-surface" d="M0 0H1600V218C1512 188 1458 254 1372 233C1283 211 1237 156 1157 185C1066 219 1037 316 940 297C835 276 832 173 730 194C616 217 583 330 467 304C372 283 344 197 252 223C156 250 96 283 0 252V0Z" fill="url(#dripGradient)" filter="url(#dripGlow)"></path>
-<path class="drip-thread drip-one" d="M467 270C467 270 468 369 469 423C470 473 492 486 493 535C494 584 472 604 472 650"></path>
-<path class="drip-thread drip-two" d="M940 258C941 315 944 350 944 394C944 439 923 461 924 505"></path>
-<path class="drip-thread drip-three" d="M1288 212C1288 252 1289 299 1289 344C1289 382 1275 405 1276 443"></path>
-<circle class="drip-drop drip-drop-one" cx="472" cy="687" r="14"></circle><circle class="drip-drop drip-drop-two" cx="924" cy="537" r="10"></circle><circle class="drip-drop drip-drop-three" cx="1276" cy="474" r="8"></circle>
-</svg>
 <div aria-hidden="true" class="hero-noise"></div>
-<div aria-hidden="true" class="hero-marquee">THE RED ROOM · LA MARSA · THE RED ROOM · LA MARSA ·</div>
 <div class="hero-inner container">
 <div class="hero-copy reveal">
 <p class="eyebrow eyebrow-light">Glaces artisanales · La Marsa</p>
@@ -83,12 +70,12 @@
 </div>
 <div class="hero-visual reveal">
 <div class="hero-image-frame">
-<img alt="Vitrine de glaces artisanales LOU à La Marsa" decoding="async" fetchpriority="high" height="1035" loading="eager" sizes="(max-width: 920px) calc(100vw - 48px), 44vw" src="assets/lou-vitrine-640.webp" srcset="assets/lou-vitrine-320.webp 320w, assets/lou-vitrine-640.webp 640w, assets/lou-vitrine-960.webp 960w" width="960"/>
+<img alt="Vitrine de glaces artisanales LOU à La Marsa" decoding="async" fetchpriority="high" height="1035" loading="eager" sizes="(max-width: 920px) calc(100vw - 48px), 44vw" src="images/inside-1.jpg" srcset="assets/lou-vitrine-320.webp 320w, assets/lou-vitrine-640.webp 640w, assets/lou-vitrine-960.webp 960w, assets/lou-vitrine-1400.webp 1400w" width="960"/>
 <span class="hero-image-index">01 / 03</span>
 <div class="hero-image-caption"><span>Saveurs du moment</span><strong>Crémeuses. Généreuses. LOU.</strong></div>
 </div>
-<article class="hero-floating-card hero-floating-card-top"><img alt="Glace Pistachio" decoding="async" height="960" loading="lazy" sizes="90px" src="assets/menu-pistachio-640.webp" srcset="assets/menu-pistachio-320.webp 320w, assets/menu-pistachio-640.webp 640w, assets/menu-pistachio-960.webp 960w" width="960"/><div><span>Best-seller</span><strong>Pistachio</strong></div></article>
-<article class="hero-floating-card hero-floating-card-bottom"><img alt="Glace The Brownie Fix" decoding="async" height="960" loading="lazy" sizes="90px" src="assets/menu-brownie-fix-640.webp" srcset="assets/menu-brownie-fix-320.webp 320w, assets/menu-brownie-fix-640.webp 640w, assets/menu-brownie-fix-960.webp 960w" width="960"/><div><span>Ultra gourmand</span><strong>Brownie Fix</strong></div></article>
+<article class="hero-floating-card hero-floating-card-top"><img alt="Intérieur rouge de LOU à La Marsa" class="hero-side-photo hero-side-photo-right" decoding="async" fetchpriority="high" height="1024" loading="eager" src="images/inside-1.jpg" width="765"/><div><span>Best-seller</span><strong>Pistachio</strong></div></article>
+<article class="hero-floating-card hero-floating-card-bottom"><img alt="Vitrine et intérieur de LOU à La Marsa" class="hero-side-photo hero-side-photo-left" decoding="async" fetchpriority="high" height="1024" loading="eager" src="images/inside-1.jpg" width="765"/><div><span>Ultra gourmand</span><strong>Brownie Fix</strong></div></article>
 </div>
 </div>
 <a aria-label="Découvrir la suite" class="hero-scroll" href="#menu-preview"><span>Scroll</span><i></i></a>
@@ -103,15 +90,15 @@
 <article class="preview-card menu-preview-card reveal" data-menu-card="" data-parallax="0.05">
 <span class="floating-badge">BEST-SELLER</span>
 <div class="preview-media"><img alt="Glace Pistachio" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-pistachio-640.webp" srcset="assets/menu-pistachio-320.webp 320w, assets/menu-pistachio-640.webp 640w, assets/menu-pistachio-960.webp 960w" width="960"/></div>
-<div class="preview-card-copy"><span class="utility-label">Pot 1 L + 6 cônes</span><h3>Pistachio</h3><p>Pistache crémeuse, éclats croquants et finale légèrement toastée.</p><div class="preview-card-bottom"><strong class="price-tag"><small>TND</small> 55,000</strong><button class="add-button" data-product="Pistachio" type="button">Ajouter</button></div></div>
+<div class="preview-card-copy"><span class="utility-label">Pot 1 L + 6 cônes</span><h3>Pistachio</h3><p>Pistache crémeuse, éclats croquants et finale légèrement toastée.</p><div class="preview-card-bottom"><strong class="price-tag"><small>TND</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
 </article>
 <article class="preview-card menu-preview-card reveal" data-menu-card="" data-parallax="0.08">
 <div class="preview-media"><img alt="The Brownie Fix" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-brownie-fix-640.webp" srcset="assets/menu-brownie-fix-320.webp 320w, assets/menu-brownie-fix-640.webp 640w, assets/menu-brownie-fix-960.webp 960w" width="960"/></div>
-<div class="preview-card-copy"><span class="utility-label">Pot 1 L + 6 cônes</span><h3>The Brownie Fix</h3><p>Brownie fondant, noisettes et sauce chocolat avec un vrai contraste de textures.</p><div class="preview-card-bottom"><strong class="price-tag"><small>TND</small> 55,000</strong><button class="add-button" data-product="The Brownie Fix" type="button">Ajouter</button></div></div>
+<div class="preview-card-copy"><span class="utility-label">Pot 1 L + 6 cônes</span><h3>The Brownie Fix</h3><p>Brownie fondant, noisettes et sauce chocolat avec un vrai contraste de textures.</p><div class="preview-card-bottom"><strong class="price-tag"><small>TND</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
 </article>
 <article class="preview-card menu-preview-card reveal" data-menu-card="" data-parallax="0.06">
 <div class="preview-media"><img alt="Valrhona Dark Chocolate" decoding="async" height="960" loading="lazy" sizes="(max-width: 680px) calc(100vw - 34px), (max-width: 1100px) 50vw, 420px" src="assets/menu-valrhona-640.webp" srcset="assets/menu-valrhona-320.webp 320w, assets/menu-valrhona-640.webp 640w, assets/menu-valrhona-960.webp 960w" width="960"/></div>
-<div class="preview-card-copy"><span class="utility-label">Pot 1 L + 6 cônes</span><h3>Valrhona Dark Chocolate</h3><p>Chocolat noir intense, texture dense et finale profondément cacaotée.</p><div class="preview-card-bottom"><strong class="price-tag"><small>TND</small> 55,000</strong><button class="add-button" data-product="Valrhona Dark Chocolate" type="button">Ajouter</button></div></div>
+<div class="preview-card-copy"><span class="utility-label">Pot 1 L + 6 cônes</span><h3>Valrhona Dark Chocolate</h3><p>Chocolat noir intense, texture dense et finale profondément cacaotée.</p><div class="preview-card-bottom"><strong class="price-tag"><small>TND</small> 55,000</strong><span class="availability-note">Disponible via Glovo</span></div></div>
 </article>
 </div>
 <div class="section-cta container reveal"><a class="button button-red button-wide" href="menu.html">Voir tout le menu →</a></div>
@@ -141,6 +128,31 @@
 <aside class="story-poster reveal"><span class="story-poster-label">THE RED ROOM</span><strong>LA<br/>MARSA</strong><div class="story-poster-rule"></div><p>Glaces artisanales<br/>Ouvert 7J/7<br/>12h — 00h</p></aside>
 </div>
 </section>
+<section aria-labelledby="realPhotosTitle" class="real-photos-section" id="photos">
+<div class="real-photos-heading container reveal">
+<p class="eyebrow eyebrow-light">Photos · La Marsa</p>
+<h2 id="realPhotosTitle">Inside LOU.</h2>
+</div>
+<div class="real-photo-grid container">
+<figure class="real-photo real-photo-main reveal">
+<img alt="La vitrine de glaces artisanales à l'intérieur de LOU" decoding="async" height="1020" loading="lazy" src="images/inside-1.jpg" width="765"/>
+<figcaption>La Vitrine</figcaption>
+</figure>
+<figure class="real-photo real-photo-small-top reveal">
+<img alt="Le comptoir de préparation et les garnitures chez LOU" decoding="async" height="1020" loading="lazy" src="images/inside-2.jpg" width="936"/>
+<figcaption>Les Saveurs</figcaption>
+</figure>
+<figure class="real-photo real-photo-small-bottom reveal">
+<img alt="L'intérieur rouge et le comptoir central de LOU" decoding="async" height="1020" loading="lazy" src="images/inside-3.jpg" width="765"/>
+<figcaption>L'Ambiance</figcaption>
+</figure>
+<figure class="real-photo real-photo-wide reveal">
+<img alt="L'espace Order Here et la collection merch de LOU" decoding="async" height="1020" loading="lazy" src="images/inside-4.jpg" width="765"/>
+<figcaption>The Red Room</figcaption>
+</figure>
+</div>
+<p class="real-photo-caption container">Photographié à La Marsa — venez vivre l'expérience.</p>
+</section>
 <section class="red-room-section" id="red-room">
 <div aria-hidden="true" class="red-room-lines"></div>
 <p class="red-room-index">02 · LA MARSA · TUNIS</p>
@@ -162,6 +174,7 @@
 </div>
 <div class="footer-bottom container"><span>© 2026 LOU. Tous droits réservés.</span><span>THE RED ROOM · LA MARSA</span></div>
 </footer>
-<div aria-live="polite" class="toast" id="toast" role="status"></div>
+
+<script src="transitions.js" defer></script>
 </body>
 </html>

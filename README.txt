@@ -5,7 +5,7 @@ Files:
 - menu.html: full menu and category filters
 - merch.html: full merch collection and filters
 - style.css: one shared stylesheet for every page
-- script.js: shared interactions, filters, cart demo and page transition
+- script.js: shared interactions, filters and page transition
 - assets/: existing LOU photos and product images
 
 Keep every file and the assets folder together.
@@ -20,5 +20,11 @@ PHONE PERFORMANCE UPDATE
 - Images below the fold use loading="lazy" and decoding="async".
 - Hero image keeps high fetch priority.
 - Mobile disables cursor glow, parallax, continuous ticker animations and expensive blur effects.
-- Navigation, filters, card expansion, cart counter, toast messages and page transitions are preserved.
+- Navigation, filters, card expansion and page transitions are preserved.
 - CSS content-visibility is used on supported mobile browsers to avoid rendering distant sections too early.
+
+
+REAL PHOTOS UPDATE
+- Cart icon removed from all navbars.
+- Real shop photos are stored in /images as inside-1.jpg through inside-4.jpg.
+- Homepage gallery uses these exact paths.

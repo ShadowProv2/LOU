@@ -14,13 +14,17 @@
 <link href="style.css" rel="stylesheet"/>
 <script defer="" src="script.js"></script>
 </head>
-<body class="page-merch is-entering">
-<div aria-hidden="true" class="page-transition"><span>MERCH</span></div>
+<body class="page-merch">
+<div id="split-overlay" aria-hidden="true">
+<div class="split-top"></div>
+<div class="split-bottom"></div>
+<div class="split-logo">LOU<span>.</span></div>
+</div>
 <div class="announcement"><div class="announcement-track"><span>GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span><span aria-hidden="true">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span><span aria-hidden="true">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span></div></div>
 <header class="site-header" id="siteHeader">
 <a aria-label="Accueil LOU" class="brand" href="index.html">LOU<span>.</span></a>
 <nav aria-label="Navigation principale" class="desktop-nav"><a data-nav="home" href="index.html">Accueil</a><a data-nav="menu" href="menu.html">Menu</a><a data-nav="merch" href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Contact</a></nav>
-<div class="header-actions"><a aria-label="Instagram LOU" class="icon-link" href="https://www.instagram.com/loucreate__/" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a><a aria-label="Commander sur Glovo" class="cart-button" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.4L21 7H7"></path><circle cx="10" cy="20" r="1.4"></circle><circle cx="18" cy="20" r="1.4"></circle></svg><span class="cart-count" id="cartCount">0</span></a><button aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" id="menuToggle" type="button"><span></span><span></span></button></div>
+<div class="header-actions"><a aria-label="Instagram LOU" class="icon-link" href="https://www.instagram.com/loucreate__/" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a><button aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" id="menuToggle" type="button"><span></span><span></span></button></div>
 <nav aria-label="Navigation mobile" class="mobile-menu" id="mobileMenu"><a data-nav="home" href="index.html">Accueil</a><a data-nav="menu" href="menu.html">Menu</a><a data-nav="merch" href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Contact</a><a class="mobile-menu-cta" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Commander sur Glovo ↗</a></nav>
 </header>
 <main>
@@ -39,25 +43,26 @@
 <div class="merch-catalog-grid container" data-filter-grid="merch">
 <article class="merch-drop-card reveal" data-category="sacs">
 <div class="merch-drop-media"><span class="limited-ribbon">LIMITED</span><img alt="Tote Bag Crème LOU" decoding="async" height="960" loading="lazy" sizes="(max-width: 920px) calc(100vw - 34px), 50vw" src="assets/merch-tote-creme-640.webp" srcset="assets/merch-tote-creme-320.webp 320w, assets/merch-tote-creme-640.webp 640w, assets/merch-tote-creme-960.webp 960w" width="960"/><span class="drop-number">01 / 04</span><h2>TOTE<br/>CRÈME</h2></div>
-<div class="merch-drop-copy"><div><p class="utility-label">DROP 001 · SAC</p><p>Spacieux, résistant et pensé pour accompagner le quotidien sans perdre l’allure de la Red Room.</p></div><strong class="price-tag price-tag-dark"><small>TND</small> 55,000</strong><button class="add-button add-button-dark" data-product="Tote Bag Crème LOU" type="button">Ajouter</button></div>
+<div class="merch-drop-copy"><div><p class="utility-label">DROP 001 · SAC</p><p>Spacieux, résistant et pensé pour accompagner le quotidien sans perdre l’allure de la Red Room.</p></div><strong class="price-tag price-tag-dark"><small>TND</small> 55,000</strong><span class="availability-note availability-note-dark">Disponible via Glovo</span></div>
 </article>
 <article class="merch-drop-card reveal" data-category="sacs">
 <div class="merch-drop-media"><img alt="Tote Bag Rose LOU" decoding="async" height="960" loading="lazy" sizes="(max-width: 920px) calc(100vw - 34px), 50vw" src="assets/merch-tote-rose-640.webp" srcset="assets/merch-tote-rose-320.webp 320w, assets/merch-tote-rose-640.webp 640w, assets/merch-tote-rose-960.webp 960w" width="960"/><span class="drop-number">02 / 04</span><h2>TOTE<br/>ROSE</h2></div>
-<div class="merch-drop-copy"><div><p class="utility-label">DROP 001 · SAC</p><p>Un format généreux avec la signature LOU en contraste, conçu pour attirer l’œil sans effort.</p></div><strong class="price-tag price-tag-dark"><small>TND</small> 55,000</strong><button class="add-button add-button-dark" data-product="Tote Bag Rose LOU" type="button">Ajouter</button></div>
+<div class="merch-drop-copy"><div><p class="utility-label">DROP 001 · SAC</p><p>Un format généreux avec la signature LOU en contraste, conçu pour attirer l’œil sans effort.</p></div><strong class="price-tag price-tag-dark"><small>TND</small> 55,000</strong><span class="availability-note availability-note-dark">Disponible via Glovo</span></div>
 </article>
 <article class="merch-drop-card reveal" data-category="accessoires">
 <div class="merch-drop-media"><span class="limited-ribbon">LIMITED</span><img alt="Pochette Crème LOU" decoding="async" height="960" loading="lazy" sizes="(max-width: 920px) calc(100vw - 34px), 50vw" src="assets/merch-pochette-creme-640.webp" srcset="assets/merch-pochette-creme-320.webp 320w, assets/merch-pochette-creme-640.webp 640w, assets/merch-pochette-creme-960.webp 960w" width="960"/><span class="drop-number">03 / 04</span><h2>POCHETTE<br/>CRÈME</h2></div>
-<div class="merch-drop-copy"><div><p class="utility-label">DROP 001 · ACCESSOIRE</p><p>Compacte, légère et signée par un logo rouge net. Le petit format le plus graphique du drop.</p></div><strong class="price-tag price-tag-dark"><small>TND</small> 25,000</strong><button class="add-button add-button-dark" data-product="Pochette Crème LOU" type="button">Ajouter</button></div>
+<div class="merch-drop-copy"><div><p class="utility-label">DROP 001 · ACCESSOIRE</p><p>Compacte, légère et signée par un logo rouge net. Le petit format le plus graphique du drop.</p></div><strong class="price-tag price-tag-dark"><small>TND</small> 25,000</strong><span class="availability-note availability-note-dark">Disponible via Glovo</span></div>
 </article>
 <article class="merch-drop-card reveal" data-category="accessoires">
 <div class="merch-drop-media"><img alt="Pochette Rose LOU" decoding="async" height="960" loading="lazy" sizes="(max-width: 920px) calc(100vw - 34px), 50vw" src="assets/merch-pochette-rose-640.webp" srcset="assets/merch-pochette-rose-320.webp 320w, assets/merch-pochette-rose-640.webp 640w, assets/merch-pochette-rose-960.webp 960w" width="960"/><span class="drop-number">04 / 04</span><h2>POCHETTE<br/>ROSE</h2></div>
-<div class="merch-drop-copy"><div><p class="utility-label">DROP 001 · ACCESSOIRE</p><p>Une pochette immédiatement reconnaissable, idéale pour les essentiels et les petits objets du quotidien.</p></div><strong class="price-tag price-tag-dark"><small>TND</small> 25,000</strong><button class="add-button add-button-dark" data-product="Pochette Rose LOU" type="button">Ajouter</button></div>
+<div class="merch-drop-copy"><div><p class="utility-label">DROP 001 · ACCESSOIRE</p><p>Une pochette immédiatement reconnaissable, idéale pour les essentiels et les petits objets du quotidien.</p></div><strong class="price-tag price-tag-dark"><small>TND</small> 25,000</strong><span class="availability-note availability-note-dark">Disponible via Glovo</span></div>
 </article>
 </div>
-<div class="instagram-order-cta container reveal"><span class="utility-label">AVAILABLE NOW · LA MARSA</span><h2>Commande le drop<br/>sur Instagram.</h2><p>Écris-nous en message privé pour connaître les disponibilités et réserver ta pièce.</p><a class="button button-cream" href="https://www.instagram.com/loucreate__/" rel="noopener" target="_blank">Commander sur Instagram ↗</a></div>
+<div class="instagram-order-cta container reveal"><span class="utility-label">AVAILABLE NOW · LA MARSA</span><h2>Commande le drop<br/>sur Glovo.</h2><p>Retrouve les disponibilités et commande ta pièce directement sur Glovo.</p><a class="button button-cream" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Commander sur Glovo ↗</a></div>
 </section>
 </main>
 <footer class="site-footer"><div aria-hidden="true" class="footer-watermark">LOU</div><div class="footer-topline"></div><div class="footer-grid container"><div class="footer-intro"><a class="footer-brand" href="index.html">LOU<span>.</span></a><p>Glaces artisanales.<br/>Crimson mood.<br/>La Marsa, Tunis.</p></div><div class="footer-column"><span>EXPLORE</span><a href="index.html">Accueil</a><a href="menu.html">Menu</a><a href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a></div><div class="footer-column"><span>VISIT</span><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Location</a><a href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Commander ↗</a></div><div class="footer-column"><span>FOLLOW</span><a href="https://www.instagram.com/loucreate__/" rel="noopener" target="_blank">Instagram ↗</a><a href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Glovo ↗</a></div></div><div class="footer-bottom container"><span>© 2026 LOU. Tous droits réservés.</span><span>THE RED ROOM · LA MARSA</span></div></footer>
-<div aria-live="polite" class="toast" id="toast" role="status"></div>
+
+<script src="transitions.js" defer></script>
 </body>
 </html>
