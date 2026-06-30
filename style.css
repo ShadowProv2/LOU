@@ -1946,3 +1946,168 @@ html.split-entry-pending {
     text-align: left;
   }
 }
+
+/* ─────────────────────────────────────────────────────────────
+   MOBILE: smaller product images
+   Keeps product information visible sooner and prevents cards
+   from being dominated by large square imagery on phones/tablets.
+   ───────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* MENU: shorter, landscape-style image area without distortion. */
+  .page-menu .menu-catalog-media {
+    width: 100%;
+    height: 160px;
+    aspect-ratio: auto;
+  }
+
+  .page-menu .menu-catalog-media img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .page-menu .menu-catalog-copy {
+    padding: 18px;
+  }
+
+  .page-menu .menu-catalog-copy h3 {
+    min-height: 0;
+    margin-block: 8px 10px;
+    font-size: clamp(1.9rem, 6.2vw, 2.7rem);
+    line-height: .92;
+  }
+
+  .page-menu .menu-catalog-copy > p:not(.menu-card-kicker) {
+    min-height: 0;
+    line-height: 1.5;
+  }
+
+  .page-menu .menu-catalog-bottom {
+    margin-top: 16px;
+    padding-top: 14px;
+  }
+
+  .page-menu .floating-badge {
+    top: 10px;
+    right: 10px;
+    max-width: calc(100% - 20px);
+    padding: 8px 10px;
+    font-size: .875rem;
+  }
+
+  /* MERCH: two compact columns with capped product photography. */
+  .page-merch .merch-catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .page-merch .merch-drop-media {
+    width: 100%;
+    height: 200px;
+    aspect-ratio: auto;
+  }
+
+  .page-merch .merch-drop-media img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .page-merch .merch-drop-media h2 {
+    left: 10px;
+    right: 10px;
+    bottom: 7px;
+    max-width: calc(100% - 20px);
+    font-size: clamp(2.2rem, 6.6vw, 3.35rem);
+    line-height: .82;
+    overflow-wrap: anywhere;
+    transform: none;
+  }
+
+  .page-merch .drop-number {
+    top: 9px;
+    right: 9px;
+  }
+
+  .page-merch .limited-ribbon {
+    padding: 7px 9px;
+    font-size: .875rem;
+  }
+
+  .page-merch .merch-drop-copy {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
+    padding: 13px 0 20px;
+  }
+
+  .page-merch .merch-drop-copy > div > p:last-child {
+    margin-top: 7px;
+    font-size: .875rem;
+    line-height: 1.45;
+  }
+
+  .page-merch .merch-drop-copy .price-tag {
+    justify-self: start;
+    padding: 7px 9px 6px;
+    font-size: 1.2rem;
+  }
+
+  .page-merch .availability-note {
+    max-width: 100%;
+    margin: 0;
+    text-align: left;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  /* MOBILE: smaller product images — phone sizes 320–480px. */
+  .page-menu .menu-catalog-media {
+    height: 140px;
+  }
+
+  .page-menu .menu-catalog-copy {
+    padding: 16px;
+  }
+
+  .page-menu .menu-catalog-copy h3 {
+    font-size: clamp(1.8rem, 9vw, 2.45rem);
+  }
+
+  .page-merch .merch-catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .page-merch .merch-drop-media {
+    height: 170px;
+    max-height: 180px;
+  }
+
+  .page-merch .merch-drop-media h2 {
+    left: 8px;
+    right: 8px;
+    bottom: 6px;
+    max-width: calc(100% - 16px);
+    font-size: clamp(1.72rem, 8.1vw, 2.35rem);
+  }
+
+  .page-merch .merch-drop-copy {
+    gap: 8px;
+    padding: 11px 0 18px;
+  }
+
+  .page-merch .merch-drop-copy .utility-label,
+  .page-merch .merch-drop-copy > div > p:last-child,
+  .page-merch .availability-note {
+    font-size: .875rem;
+  }
+
+  .page-merch .merch-drop-copy .price-tag {
+    font-size: 1.08rem;
+  }
+}
