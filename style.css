@@ -512,7 +512,6 @@ button { color: inherit; }
 .merch-drop-copy { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: end; padding: 22px 0 14px; border-bottom: 1px solid rgba(255,248,245,.14); }
 .merch-drop-copy > div > p:last-child { max-width: 520px; margin: 9px 0 0; color: rgba(255,248,245,.62); line-height: 1.65; }
 .merch-drop-copy .utility-label { margin: 0; color: rgba(255,248,245,.42); font-size: .74rem; }
-.merch-drop-copy 
 .instagram-order-cta { margin-top: 110px; padding: clamp(42px,7vw,90px); text-align: center; background: var(--red); }
 .instagram-order-cta .utility-label { color: rgba(255,248,245,.66); }
 .instagram-order-cta h2 { margin: 18px 0; font-family: var(--display); font-size: clamp(4rem,8vw,8rem); font-weight: 400; line-height: .85; text-transform: uppercase; }
@@ -644,9 +643,6 @@ button { color: inherit; }
   }
 }
 
-
-  to { opacity: 1; }
-}
 
 @media (max-width: 920px), (pointer: coarse) {
   html { scroll-behavior: auto; }
@@ -1273,5 +1269,680 @@ button { color: inherit; }
   .glovo-menu-button {
     width: 100%;
     min-width: 0;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE FIX: FULL RESPONSIVE AUDIT — 320px TO 768px
+   These overrides preserve the desktop art direction while
+   preventing horizontal overflow, cramped controls and jank.
+   ========================================================== */
+
+/* MOBILE FIX: global overflow and intrinsic media safety. */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+  html,
+  body { overflow-x: clip; }
+}
+
+html.menu-open {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body.menu-open {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+main,
+header,
+footer,
+section {
+  min-width: 0;
+  max-width: 100%;
+}
+
+img,
+picture,
+svg,
+video,
+iframe {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+/* Elements with deliberate crop boxes retain their controlled height. */
+.hero-image-frame img,
+.hero-floating-card img,
+.preview-media img,
+.merch-editorial-media img,
+.real-photo img,
+.menu-catalog-media img,
+.merch-drop-media img {
+  height: 100%;
+}
+
+.announcement-mobile { display: none; }
+
+/* MOBILE FIX: prevent a flash before the split-wipe entry animation starts. */
+html.split-entry-pending #split-overlay {
+  visibility: visible;
+  pointer-events: all;
+}
+
+html.split-entry-pending .split-top,
+html.split-entry-pending .split-bottom {
+  transform: translateY(0);
+}
+
+html.split-entry-pending {
+  overflow: hidden;
+}
+
+/* MOBILE FIX: every important small control has a reliable touch target. */
+.filter-button,
+.breadcrumb,
+.text-link,
+.menu-details-toggle {
+  min-height: 44px;
+}
+
+.menu-details-toggle {
+  width: 48px;
+  height: 48px;
+}
+
+@media (max-width: 920px) {
+  :root {
+    --container: min(760px, calc(100% - 34px));
+    --header-h: 70px;
+  }
+
+  body {
+    min-width: 320px;
+    font-size: 16px;
+  }
+
+  a,
+  button {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(200, 0, 26, .18);
+  }
+
+  html.menu-open .announcement {
+    z-index: 900;
+  }
+
+  /* MOBILE FIX: header remains unclipped and the overlay truly covers the viewport. */
+  .site-header {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 12px;
+    min-height: var(--header-h);
+    padding: 10px 17px;
+  }
+
+  .brand,
+  .header-actions {
+    position: relative;
+    z-index: 1002;
+  }
+
+  .brand {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    font-size: clamp(2rem, 8vw, 2.35rem);
+  }
+
+  .header-actions {
+    flex: 0 0 auto;
+  }
+
+  .icon-link,
+  .menu-toggle {
+    flex: 0 0 44px;
+  }
+
+  .mobile-menu {
+    inset: 0;
+    z-index: 999;
+    min-height: 100vh;
+    min-height: 100dvh;
+    max-height: 100dvh;
+    padding: calc(var(--announcement-h) + var(--header-h) + 18px) 20px 24px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    visibility: hidden;
+  }
+
+  .site-header.is-scrolled .mobile-menu {
+    padding-top: calc(var(--header-h) + 18px);
+  }
+
+  .mobile-menu.is-open {
+    visibility: visible;
+  }
+
+  .mobile-menu a {
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    padding: 11px 0;
+    font-size: clamp(1.75rem, 7.5vw, 2.2rem);
+    line-height: 1;
+  }
+
+  .mobile-menu .mobile-menu-cta {
+    min-height: 54px;
+    justify-content: center;
+    padding: 14px 18px;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  /* MOBILE FIX: center hero only; decorative side cards cannot overlap or overflow. */
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 42px;
+    padding: 54px 0 72px;
+  }
+
+  .hero-copy,
+  .hero-visual {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .hero-logo {
+    max-width: 100%;
+    font-size: clamp(6.2rem, 31vw, 10rem);
+    overflow-wrap: normal;
+  }
+
+  .hero-tagline {
+    font-size: clamp(2.2rem, 9vw, 3.6rem);
+  }
+
+  .hero-description,
+  .heading-copy,
+  .catalog-intro > p,
+  .story-copy p,
+  .red-room-copy > p:not(.eyebrow),
+  .location-list strong,
+  .menu-catalog-copy > p:not(.menu-card-kicker),
+  .merch-drop-copy > div > p:last-child,
+  .instagram-order-cta p,
+  .glovo-menu-cta-copy p,
+  .footer-intro p,
+  .footer-column a {
+    font-size: 1rem;
+  }
+
+  .hero-floating-card {
+    display: none;
+  }
+
+  .hero-visual {
+    min-height: 0;
+    height: clamp(360px, 92vw, 560px);
+  }
+
+  .hero-image-frame {
+    inset: 0;
+    transform: none;
+  }
+
+  .hero-image-caption {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .hero-image-caption strong {
+    font-size: clamp(1.25rem, 5vw, 1.65rem);
+  }
+
+  /* MOBILE FIX: compact but readable utility typography. */
+  .eyebrow,
+  .utility-label,
+  .hero-meta,
+  .hero-image-index,
+  .hero-image-caption span,
+  .menu-card-kicker,
+  .filter-label,
+  .page-hero-kicker,
+  .story-poster-label,
+  .red-room-index,
+  .footer-column > span,
+  .footer-bottom,
+  .merch-editorial-info span,
+  .merch-drop-copy .utility-label,
+  .drop-number,
+  .card-number,
+  .availability-note,
+  .real-photo-caption,
+  .limited-ribbon,
+  .breadcrumb {
+    font-size: .875rem;
+  }
+
+  .availability-note {
+    max-width: 180px;
+    line-height: 1.45;
+  }
+
+  /* MOBILE FIX: filters swipe horizontally without widening the page. */
+  .filter-bar-wrap {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .filter-bar {
+    width: 100%;
+    min-height: 68px;
+    gap: 8px;
+    padding: 10px 17px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter-button {
+    min-height: 44px;
+    padding: 10px 15px;
+    scroll-snap-align: start;
+    font-size: .875rem;
+  }
+
+  /* MOBILE FIX: tablet grids never exceed two columns. */
+  .page-menu .menu-catalog-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .menu-catalog-card,
+  .merch-drop-card,
+  .preview-card,
+  .merch-editorial-card {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .menu-catalog-copy {
+    padding: 22px;
+  }
+
+  .menu-catalog-copy h3 {
+    font-size: clamp(2rem, 6.8vw, 3.2rem);
+    overflow-wrap: anywhere;
+  }
+
+  .menu-card-detail {
+    padding: 28px 24px;
+  }
+
+  .menu-card-detail p {
+    max-width: calc(100% - 34px);
+    font-size: 1rem;
+  }
+
+  .merch-catalog-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 42px;
+  }
+
+  .merch-drop-media,
+  .merch-editorial-media,
+  .menu-catalog-media,
+  .preview-media {
+    width: 100%;
+  }
+
+  .merch-drop-media h2 {
+    max-width: calc(100% - 32px);
+    font-size: clamp(3.6rem, 12vw, 6.5rem);
+    overflow-wrap: anywhere;
+  }
+
+  .merch-drop-copy {
+    gap: 14px;
+  }
+
+  .instagram-order-cta {
+    width: var(--container);
+    margin-inline: auto;
+  }
+
+  /* MOBILE FIX: oversized decorative words are clipped by their own sections. */
+  .page-hero,
+  .story-section,
+  .site-footer {
+    overflow: hidden;
+  }
+
+  .page-hero-watermark,
+  .footer-watermark,
+  .story-number {
+    max-width: none;
+    pointer-events: none;
+  }
+
+  /* MOBILE FIX: footer links are comfortably tappable. */
+  .footer-column {
+    gap: 4px;
+  }
+
+  .footer-column a,
+  .footer-brand,
+  .breadcrumb,
+  .text-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .footer-bottom {
+    line-height: 1.55;
+  }
+
+  /* MOBILE FIX: expensive hover transforms are removed on touch devices. */
+  .preview-card:hover,
+  .menu-catalog-card:hover,
+  .merch-drop-card:hover,
+  .merch-editorial-card:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 680px) {
+  :root {
+    --container: min(520px, calc(100% - 34px));
+  }
+
+  /* MOBILE FIX: concise announcement fits 320–480px without clipping. */
+  .announcement-track {
+    width: 100%;
+    min-width: 0;
+    justify-content: center;
+    gap: 0;
+    padding: 0 10px;
+    animation: none;
+  }
+
+  .announcement-desktop { display: none; }
+  .announcement-mobile {
+    display: block;
+    max-width: 100%;
+    font-size: .66rem;
+    line-height: 1;
+    letter-spacing: .075em;
+    white-space: nowrap;
+  }
+
+  .announcement-track span::after { display: none; }
+
+  .site-header {
+    padding-inline: 14px;
+  }
+
+  .hero-inner {
+    gap: 34px;
+    padding: 46px 0 64px;
+  }
+
+  .hero-logo {
+    font-size: clamp(5.8rem, 31vw, 8rem);
+  }
+
+  /* MOBILE FIX: primary CTAs stack and fill the available width. */
+  .hero-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .hero-actions .button,
+  .location-actions .button,
+  .catalog-cta .button,
+  .section-cta .button,
+  .instagram-order-cta .button,
+  .glovo-menu-button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero-meta {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .hero-meta span {
+    min-width: 0;
+  }
+
+  .hero-meta b {
+    font-size: .92rem;
+  }
+
+  .hero-visual {
+    height: clamp(340px, 112vw, 430px);
+  }
+
+  .section-heading,
+  .catalog-intro,
+  .story-content,
+  .location-section,
+  .glovo-menu-cta-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .section-heading h2,
+  .story-heading h2,
+  .catalog-intro h2 {
+    font-size: clamp(3.05rem, 15vw, 5rem);
+  }
+
+  .preview-section,
+  .story-section,
+  .catalog-section {
+    padding-block: 64px;
+  }
+
+  .preview-grid,
+  .merch-preview-grid,
+  .page-menu .menu-catalog-grid,
+  .merch-catalog-grid,
+  .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .preview-media {
+    aspect-ratio: 1.08;
+  }
+
+  .preview-card-copy,
+  .menu-catalog-copy {
+    padding: 20px;
+  }
+
+  .preview-card-bottom,
+  .menu-catalog-bottom {
+    gap: 12px;
+  }
+
+  .price-tag {
+    flex: 0 0 auto;
+  }
+
+  .availability-note {
+    max-width: 145px;
+    margin-left: 0;
+    text-align: right;
+  }
+
+  .page-menu .page-hero,
+  .page-merch .page-hero {
+    min-height: 390px;
+    padding-inline: 17px;
+  }
+
+  .page-menu .page-hero-content,
+  .page-merch .page-hero > p:last-child {
+    max-width: 100%;
+  }
+
+  .page-hero-watermark {
+    font-size: clamp(9rem, 52vw, 14rem);
+  }
+
+  .page-menu .page-hero-content h1 {
+    font-size: clamp(3.8rem, 20vw, 6rem);
+  }
+
+  .page-merch .page-hero::after {
+    font-size: clamp(4.5rem, 22vw, 7rem);
+  }
+
+  .page-hero-description-strip {
+    padding-inline: 17px;
+  }
+
+  .filter-bar {
+    padding-inline: 17px;
+  }
+
+  .menu-catalog-copy h3 {
+    min-height: auto;
+    font-size: clamp(2rem, 11vw, 3.35rem);
+  }
+
+  .menu-catalog-copy > p:not(.menu-card-kicker) {
+    min-height: auto;
+  }
+
+  .merch-drop-media h2 {
+    font-size: clamp(3.1rem, 16vw, 4.7rem);
+  }
+
+  .merch-drop-copy {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .instagram-order-cta {
+    padding: 42px 20px;
+  }
+
+  .instagram-order-cta h2 {
+    font-size: clamp(3rem, 15vw, 5rem);
+  }
+
+  .location-card {
+    padding: 58px 20px;
+  }
+
+  .location-list > div {
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .real-photos-heading {
+    width: var(--container);
+  }
+
+  .real-photo-grid {
+    width: 100%;
+    gap: 0;
+  }
+
+  .real-photo {
+    max-width: 100%;
+  }
+
+  .real-photo img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-grid {
+    gap: 30px;
+  }
+
+  .footer-bottom {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  /* MOBILE FIX: final guardrail for very narrow 320–360px screens. */
+  :root { --container: calc(100% - 28px); }
+
+  .announcement-mobile {
+    font-size: .61rem;
+    letter-spacing: .05em;
+  }
+
+  .site-header {
+    padding-inline: 12px;
+  }
+
+  .brand {
+    font-size: 1.95rem;
+  }
+
+  .hero-logo {
+    font-size: clamp(5.3rem, 30vw, 6.5rem);
+  }
+
+  .hero-tagline {
+    font-size: 2rem;
+  }
+
+  .hero-meta {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-meta span {
+    grid-template-columns: auto 1fr;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .filter-bar {
+    padding-inline: 14px;
+  }
+
+  .menu-catalog-copy,
+  .preview-card-copy {
+    padding: 18px;
+  }
+
+  .menu-catalog-bottom,
+  .preview-card-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .availability-note {
+    max-width: none;
+    text-align: left;
   }
 }

@@ -1,0 +1,17 @@
+LOU MOBILE AUDIT
+
+Test targets: 320–480px phones, 768px tablet.
+
+Main fixes:
+- full-screen mobile navigation with scroll locking, Escape support and focus containment
+- compact mobile announcement copy
+- center-only hero imagery on mobile; floating cards disabled to prevent overlap
+- stacked full-width CTAs on phones
+- overflow guardrails for oversized decorative words and every page section
+- single-column phone grids and two-column tablet menu grid
+- horizontally scrollable filter bars with 44px touch targets
+- one-column merch layout with preserved image aspect ratios
+- larger mobile utility/body text and touch-friendly footer/navigation links
+- lazy loading for every below-the-fold image
+- split transition mobile timing retained at 15% faster, with pre-paint entry coverage
+- removed malformed CSS fragments that could affect downstream rules

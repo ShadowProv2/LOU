@@ -3,6 +3,7 @@
 
   const STORAGE_KEY = 'split-entering';
   const MOBILE_QUERY = window.matchMedia('(max-width: 768px), (pointer: coarse)');
+  const ROOT = document.documentElement;
 
   const desktopTiming = {
     logoIn: 300,
@@ -11,6 +12,7 @@
     openCleanup: 660,
   };
 
+  /* MOBILE FIX: transitions are exactly 15% faster on phones/tablets. */
   const mobileTiming = Object.fromEntries(
     Object.entries(desktopTiming).map(([key, value]) => [key, Math.round(value * 0.85)]),
   );
@@ -31,7 +33,7 @@
     try {
       sessionStorage.setItem(STORAGE_KEY, 'true');
     } catch {
-      // Navigation still works when sessionStorage is unavailable.
+      // Navigation still works when storage is unavailable.
     }
   }
 
@@ -54,7 +56,6 @@
     const url = new URL(link.href, window.location.href);
     if (url.origin !== window.location.origin) return false;
 
-    // Same-page anchors should scroll normally without a transition.
     const sameDocument =
       url.pathname === window.location.pathname &&
       url.search === window.location.search;
@@ -66,6 +67,7 @@
   function resetOverlay(overlay) {
     overlay.classList.remove('closing', 'opening', 'logo-visible', 'is-held');
     overlay.style.pointerEvents = 'none';
+    ROOT.classList.remove('split-entry-pending');
   }
 
   function playOpening(overlay) {
@@ -75,19 +77,23 @@
     overlay.classList.add('opening');
     overlay.style.pointerEvents = 'all';
 
-    window.setTimeout(() => {
-      resetOverlay(overlay);
-    }, timing.openCleanup);
+    // The HTML pre-paint class kept both panels closed before deferred JS ran.
+    ROOT.classList.remove('split-entry-pending');
+
+    window.setTimeout(() => resetOverlay(overlay), timing.openCleanup);
   }
 
   function initialize() {
     const overlay = document.getElementById('split-overlay');
-    if (!overlay) return;
+    if (!overlay) {
+      ROOT.classList.remove('split-entry-pending');
+      return;
+    }
 
-    // Always process the entering state before registering click handlers.
+    // MOBILE FIX: process the covered entry state before registering clicks.
     if (readEnteringFlag()) {
       clearEnteringFlag();
-      playOpening(overlay);
+      window.requestAnimationFrame(() => playOpening(overlay));
     } else {
       resetOverlay(overlay);
     }
@@ -112,21 +118,15 @@
       overlay.classList.add('closing');
       overlay.style.pointerEvents = 'all';
 
-      window.setTimeout(() => {
-        overlay.classList.add('logo-visible');
-      }, timing.logoIn);
-
-      window.setTimeout(() => {
-        overlay.classList.add('is-held');
-      }, timing.holdStart);
-
+      window.setTimeout(() => overlay.classList.add('logo-visible'), timing.logoIn);
+      window.setTimeout(() => overlay.classList.add('is-held'), timing.holdStart);
       window.setTimeout(() => {
         setEnteringFlag();
-        window.location.href = destination;
+        window.location.assign(destination);
       }, timing.navigate);
     });
 
-    // Restore a clean idle state when returning through the back-forward cache.
+    // Restore a clean state after browser back/forward cache navigation.
     window.addEventListener('pageshow', (event) => {
       if (!event.persisted) return;
       isNavigating = false;

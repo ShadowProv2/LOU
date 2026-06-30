@@ -13,10 +13,10 @@ document.body.classList.toggle('performance-lite', performanceLite);
 
 let headerFrame = 0;
 let parallaxFrame = 0;
+let lockedScrollY = 0;
+let lastFocusedElement = null;
 
-
-
-// Pause all decorative animation while the tab is hidden.
+// Pause decorative animation while the tab is hidden.
 document.addEventListener('visibilitychange', () => {
   document.body.classList.toggle('is-page-hidden', document.hidden);
 });
@@ -34,30 +34,83 @@ function requestHeaderUpdate() {
 window.addEventListener('scroll', requestHeaderUpdate, { passive: true });
 updateHeader();
 
-function closeMobileMenu() {
-  menuToggle?.classList.remove('is-open');
-  mobileMenu?.classList.remove('is-open');
-  menuToggle?.setAttribute('aria-expanded', 'false');
+/* MOBILE FIX: lock the complete page, including iOS Safari, while navigation is open. */
+function lockPageScroll() {
+  lockedScrollY = window.scrollY;
+  document.documentElement.classList.add('menu-open');
+  document.body.classList.add('menu-open');
+  document.body.style.top = `-${lockedScrollY}px`;
+}
+
+function unlockPageScroll() {
+  const wasLocked = document.body.classList.contains('menu-open');
+  document.documentElement.classList.remove('menu-open');
   document.body.classList.remove('menu-open');
+  document.body.style.top = '';
+  if (wasLocked) window.scrollTo(0, lockedScrollY);
+}
+
+function setMobileMenuState(open, { restoreFocus = false } = {}) {
+  if (!menuToggle || !mobileMenu) return;
+
+  menuToggle.classList.toggle('is-open', open);
+  mobileMenu.classList.toggle('is-open', open);
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+  mobileMenu.setAttribute('aria-hidden', String(!open));
+
+  if (open) {
+    lastFocusedElement = document.activeElement;
+    lockPageScroll();
+    window.requestAnimationFrame(() => mobileMenu.querySelector('a')?.focus({ preventScroll: true }));
+  } else {
+    unlockPageScroll();
+    if (restoreFocus) (lastFocusedElement || menuToggle).focus({ preventScroll: true });
+  }
+}
+
+function closeMobileMenu(options) {
+  setMobileMenuState(false, options);
 }
 
 menuToggle?.addEventListener('click', () => {
-  const willOpen = !mobileMenu?.classList.contains('is-open');
-  menuToggle.classList.toggle('is-open', willOpen);
-  mobileMenu?.classList.toggle('is-open', willOpen);
-  menuToggle.setAttribute('aria-expanded', String(willOpen));
-  document.body.classList.toggle('menu-open', willOpen);
+  setMobileMenuState(!mobileMenu?.classList.contains('is-open'));
 });
 
 document.querySelectorAll('#mobileMenu a').forEach((link) => {
-  link.addEventListener('click', closeMobileMenu);
+  link.addEventListener('click', () => closeMobileMenu());
+});
+
+// MOBILE FIX: Escape closes the menu and Tab stays inside the open overlay.
+document.addEventListener('keydown', (event) => {
+  if (!mobileMenu?.classList.contains('is-open')) return;
+
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    closeMobileMenu({ restoreFocus: true });
+    return;
+  }
+
+  if (event.key !== 'Tab') return;
+  const focusable = [...mobileMenu.querySelectorAll('a[href], button:not([disabled])')];
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
 });
 
 window.addEventListener('resize', () => {
   if (window.innerWidth > 920) closeMobileMenu();
 }, { passive: true });
 
-
+window.addEventListener('orientationchange', () => closeMobileMenu(), { passive: true });
 
 // Menu card expansion remains available for mouse, touch and keyboard users.
 document.querySelectorAll('[data-menu-card]').forEach((card) => {
@@ -95,6 +148,7 @@ document.querySelectorAll('[data-menu-card]').forEach((card) => {
 
 // Shared category filters for menu and merch pages.
 document.querySelectorAll('[data-filter-group]').forEach((button) => {
+  button.setAttribute('aria-pressed', String(button.classList.contains('is-active')));
   button.addEventListener('click', () => {
     const group = button.dataset.filterGroup;
     const filter = button.dataset.filter;
@@ -102,7 +156,9 @@ document.querySelectorAll('[data-filter-group]').forEach((button) => {
     if (!grid) return;
 
     document.querySelectorAll(`[data-filter-group="${group}"]`).forEach((item) => {
-      item.classList.toggle('is-active', item === button);
+      const active = item === button;
+      item.classList.toggle('is-active', active);
+      item.setAttribute('aria-pressed', String(active));
     });
 
     grid.querySelectorAll('[data-category]').forEach((card) => {
@@ -181,4 +237,3 @@ if (parallaxItems.length) {
   window.addEventListener('resize', requestParallaxUpdate, { passive: true });
   updateParallax();
 }
-

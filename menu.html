@@ -3,7 +3,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><!-- MOBILE FIX: prime the split transition before first paint to avoid a flash --><script>try{if(sessionStorage.getItem('split-entering')==='true')document.documentElement.classList.add('split-entry-pending')}catch(e){}</script>
 <meta content="Découvrez le menu complet de LOU : gâteaux glacés, pots 1L et 6 cônes, et formats 1/2L à La Marsa." name="description"/>
 <meta content="#140003" name="theme-color"/>
 <title>Menu — LOU La Marsa</title>
@@ -15,17 +15,17 @@
 <script defer="" src="script.js"></script>
 </head>
 <body class="page-menu">
-<div id="split-overlay" aria-hidden="true">
+<!-- MOBILE FIX: GPU-accelerated split overlay; mobile timing is reduced in transitions.js --><div aria-hidden="true" id="split-overlay">
 <div class="split-top"></div>
 <div class="split-bottom"></div>
 <div class="split-logo">LOU<span>.</span></div>
 </div>
-<div class="announcement"><div class="announcement-track"><span>GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span><span aria-hidden="true">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span><span aria-hidden="true">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span></div></div>
+<!-- MOBILE FIX: compact announcement copy prevents wrapping on narrow screens --><div aria-label="Informations pratiques" class="announcement"><div class="announcement-track"><span class="announcement-desktop">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span><span aria-hidden="true" class="announcement-desktop">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span><span aria-hidden="true" class="announcement-desktop">GLACES ARTISANALES À LA MARSA · TOUS LES JOURS · 12H — 00H</span><span class="announcement-mobile">LOU LA MARSA · 7J/7 · 12H—00H</span></div></div>
 <header class="site-header" id="siteHeader">
 <a aria-label="Accueil LOU" class="brand" href="index.html">LOU<span>.</span></a>
 <nav aria-label="Navigation principale" class="desktop-nav"><a data-nav="home" href="index.html">Accueil</a><a data-nav="menu" href="menu.html">Menu</a><a data-nav="merch" href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Contact</a></nav>
 <div class="header-actions"><a aria-label="Instagram LOU" class="icon-link" href="https://www.instagram.com/loucreate__/" rel="noopener" target="_blank"><svg aria-hidden="true" viewbox="0 0 24 24"><rect height="18" rx="5" width="18" x="3" y="3"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a><button aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu" class="menu-toggle" id="menuToggle" type="button"><span></span><span></span></button></div>
-<nav aria-label="Navigation mobile" class="mobile-menu" id="mobileMenu"><a data-nav="home" href="index.html">Accueil</a><a data-nav="menu" href="menu.html">Menu</a><a data-nav="merch" href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Contact</a><a class="mobile-menu-cta" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Commander sur Glovo ↗</a></nav>
+<!-- MOBILE FIX: full-screen mobile navigation; state managed in script.js --><nav aria-hidden="true" aria-label="Navigation mobile" class="mobile-menu" id="mobileMenu"><a data-nav="home" href="index.html">Accueil</a><a data-nav="menu" href="menu.html">Menu</a><a data-nav="merch" href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Contact</a><a class="mobile-menu-cta" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Commander sur Glovo ↗</a></nav>
 </header>
 <main>
 <div class="breadcrumb-wrap"><a class="breadcrumb" href="index.html"><span>←</span> Back to Home</a></div>
@@ -173,7 +173,6 @@ Sorbet</h3><p>Une lecture fruitée et élégante de la pêche Melba, fraîche et
 <div aria-hidden="true" class="menu-card-detail"><span class="utility-label">DÉTAIL</span><p>Format duo · 1/2 litre · 3 cônes.</p><button aria-label="Fermer le détail" class="menu-details-toggle" type="button">×</button></div><button aria-label="Voir le détail de Pot 1/2L + 3 Cones" class="menu-card-hit" type="button"></button>
 </article>
 </div>
-
 <section aria-labelledby="glovo-menu-title" class="glovo-menu-cta">
 <div class="glovo-menu-cta-inner container">
 <div class="glovo-menu-cta-copy">
@@ -183,11 +182,9 @@ Sorbet</h3><p>Une lecture fruitée et élégante de la pêche Melba, fraîche et
 <a class="button glovo-menu-button" href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">COMMANDER SUR GLOVO →</a>
 </div>
 </section>
-
 </section>
 </main>
 <footer class="site-footer"><div aria-hidden="true" class="footer-watermark">LOU</div><div class="footer-topline"></div><div class="footer-grid container"><div class="footer-intro"><a class="footer-brand" href="index.html">LOU<span>.</span></a><p>Glaces artisanales.<br/>Crimson mood.<br/>La Marsa, Tunis.</p></div><div class="footer-column"><span>EXPLORE</span><a href="index.html">Accueil</a><a href="menu.html">Menu</a><a href="merch.html">Merch</a><a href="index.html#histoire">Histoire</a></div><div class="footer-column"><span>VISIT</span><a href="index.html#red-room">The Red Room</a><a href="index.html#location">Location</a><a href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Commander ↗</a></div><div class="footer-column"><span>FOLLOW</span><a href="https://www.instagram.com/loucreate__/" rel="noopener" target="_blank">Instagram ↗</a><a href="https://glovoapp.com/fr/tn/tunis/stores/lou-tis" rel="noopener" target="_blank">Glovo ↗</a></div></div><div class="footer-bottom container"><span>© 2026 LOU. Tous droits réservés.</span><span>THE RED ROOM · LA MARSA</span></div></footer>
-
-<script src="transitions.js" defer></script>
-</body>
+<script defer="" src="transitions.js"></script>
+<!-- MOBILE FIX: responsive layout, touch targets, overflow and image loading audited for 320–768px --></body>
 </html>
